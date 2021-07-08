@@ -1,2 +1,4 @@
-docs/en/transformers.md
-docs/en/transformers.md
+docs/en/annotator_entries/RegexMatcher.md
+src/main/scala/com/johnsnowlabs/nlp/annotators/RegexMatcher.scala
+docs/en/annotator_entries/RegexMatcher.md
+src/main/scala/com/johnsnowlabs/nlp/annotators/RegexMatcher.scala
