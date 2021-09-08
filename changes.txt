@@ -1,8 +1,2 @@
-docs/_includes/demomenu.html
-docs/demos/extract_structured_data.md
-docs/demos/extract_tables.md
-docs/demos/resolve_entities_codes.md
-docs/_includes/demomenu.html
-docs/demos/extract_tables.md
-docs/demos/extract_tables_structured_data.md
-docs/demos/resolve_entities_codes.md
+docs/_plugins/search_index.rb
+docs/_plugins/search_index.rb

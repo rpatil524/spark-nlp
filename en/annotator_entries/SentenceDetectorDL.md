@@ -35,9 +35,7 @@ DOCUMENT
 {%- capture model_python_example -%}
 import sparknlp
 from sparknlp.base import *
-from sparknlp.common import *
 from sparknlp.annotator import *
-from sparknlp.training import *
 from pyspark.ml import Pipeline
 # In this example, the normal `SentenceDetector` is compared to the `SentenceDetectorDLModel`. In a pipeline,
 # `SentenceDetectorDLModel` can be used as a replacement for the `SentenceDetector`.
@@ -147,6 +145,10 @@ result.selectExpr("explode(sentencesDL.result) as sentencesDL").show(false)
 [SentenceDetectorDLModel](https://nlp.johnsnowlabs.com/api/com/johnsnowlabs/nlp/annotators/sentence_detector_dl/SentenceDetectorDLModel)
 {%- endcapture -%}
 
+{%- capture model_python_api_link -%}
+[SentenceDetectorDLModel](https://nlp.johnsnowlabs.com/api/python/reference/autosummary/sparknlp.annotator.SentenceDetectorDLModel.html)
+{%- endcapture -%}
+
 {%- capture model_source_link -%}
 [SentenceDetectorDLModel](https://github.com/JohnSnowLabs/spark-nlp/tree/master/src/main/scala/com/johnsnowlabs/nlp/annotators/sentence_detector_dl/SentenceDetectorDLModel.scala)
 {%- endcapture -%}
@@ -180,9 +182,7 @@ DOCUMENT
 {%- capture approach_python_example -%}
 import sparknlp
 from sparknlp.base import *
-from sparknlp.common import *
 from sparknlp.annotator import *
-from sparknlp.training import *
 from pyspark.ml import Pipeline
 # The training process needs data, where each data point is a sentence.
 # In this example the `train.txt` file has the form of
@@ -248,6 +248,10 @@ val model = pipeline.fit(trainingData)
 [SentenceDetectorDLApproach](https://nlp.johnsnowlabs.com/api/com/johnsnowlabs/nlp/annotators/sentence_detector_dl/SentenceDetectorDLApproach)
 {%- endcapture -%}
 
+{%- capture approach_python_api_link -%}
+[SentenceDetectorDLApproach](https://nlp.johnsnowlabs.com/api/python/reference/autosummary/sparknlp.annotator.SentenceDetectorDLApproach.html)
+{%- endcapture -%}
+
 {%- capture approach_source_link -%}
 [SentenceDetectorDLApproach](https://github.com/JohnSnowLabs/spark-nlp/tree/master/src/main/scala/com/johnsnowlabs/nlp/annotators/sentence_detector_dl/SentenceDetectorDLApproach.scala)
 {%- endcapture -%}
@@ -258,8 +262,7 @@ title=title
 model_description=model_description
 model_input_anno=model_input_anno
 model_output_anno=model_output_anno
-model_python_example=model_python_example
-model_scala_example=model_scala_example
+model_python_api_link=model_python_api_link
 model_api_link=model_api_link
 model_source_link=model_source_link
 approach_description=approach_description
@@ -267,6 +270,7 @@ approach_input_anno=approach_input_anno
 approach_output_anno=approach_output_anno
 approach_python_example=approach_python_example
 approach_scala_example=approach_scala_example
+approach_python_api_link=approach_python_api_link
 approach_api_link=approach_api_link
 approach_source_link=approach_source_link
 %}
