@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>sparknlp.annotator.YakeModel &#8212; Spark NLP 3.2.2 documentation</title>
+    <title>sparknlp.annotator.YakeModel &#8212; Spark NLP 3.3.0 documentation</title>
     
   <link href="../../static/css/theme.css" rel="stylesheet" />
   <link href="../../static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -37,7 +37,7 @@
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="sparknlp.base" href="sparknlp.base.html" />
-    <link rel="prev" title="sparknlp.annotator.XlnetEmbeddings" href="sparknlp.annotator.XlnetEmbeddings.html" />
+    <link rel="prev" title="sparknlp.annotator.XlnetForTokenClassification" href="sparknlp.annotator.XlnetForTokenClassification.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -132,6 +132,11 @@
    <li class="toctree-l2">
     <a class="reference internal" href="sparknlp.annotator.AlbertEmbeddings.html">
      sparknlp.annotator.AlbertEmbeddings
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="sparknlp.annotator.AlbertForTokenClassification.html">
+     sparknlp.annotator.AlbertForTokenClassification
     </a>
    </li>
    <li class="toctree-l2">
@@ -265,6 +270,11 @@
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="sparknlp.annotator.LongformerForTokenClassification.html">
+     sparknlp.annotator.LongformerForTokenClassification
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="sparknlp.annotator.MarianTransformer.html">
      sparknlp.annotator.MarianTransformer
     </a>
@@ -382,6 +392,11 @@
    <li class="toctree-l2">
     <a class="reference internal" href="sparknlp.annotator.RoBertaEmbeddings.html">
      sparknlp.annotator.RoBertaEmbeddings
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="sparknlp.annotator.RoBertaForTokenClassification.html">
+     sparknlp.annotator.RoBertaForTokenClassification
     </a>
    </li>
    <li class="toctree-l2">
@@ -535,6 +550,11 @@
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="sparknlp.annotator.XlmRoBertaForTokenClassification.html">
+     sparknlp.annotator.XlmRoBertaForTokenClassification
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="sparknlp.annotator.XlmRoBertaSentenceEmbeddings.html">
      sparknlp.annotator.XlmRoBertaSentenceEmbeddings
     </a>
@@ -542,6 +562,11 @@
    <li class="toctree-l2">
     <a class="reference internal" href="sparknlp.annotator.XlnetEmbeddings.html">
      sparknlp.annotator.XlnetEmbeddings
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="sparknlp.annotator.XlnetForTokenClassification.html">
+     sparknlp.annotator.XlnetForTokenClassification
     </a>
    </li>
    <li class="toctree-l2 current active">
@@ -779,7 +804,7 @@ upper bound for the score can be set with <a class="reference internal" href="#s
 </thead>
 <tbody>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">TOKEN</span></code></p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">KEYWORD</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">CHUNK</span></code></p></td>
 </tr>
 </tbody>
 </table>
@@ -942,7 +967,7 @@ methods on texts of different sizes, languages, and domains.</em></p>
 <td><p>Returns an MLReader instance for this class.</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="#sparknlp.annotator.YakeModel.save" title="sparknlp.annotator.YakeModel.save"><code class="xref py py-obj docutils literal notranslate"><span class="pre">save</span></code></a>(path)</p></td>
-<td><p>Save this ML instance to the given path, a shortcut of ‘write().save(path)’.</p></td>
+<td><p>Save this ML instance to the given path, a shortcut of 'write().save(path)'.</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#sparknlp.annotator.YakeModel.set" title="sparknlp.annotator.YakeModel.set"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set</span></code></a>(param, value)</p></td>
 <td><p>Sets a parameter in the embedded param map.</p></td>
@@ -1410,7 +1435,7 @@ Spark ML.</p>
               
               <div class='prev-next-bottom'>
                 
-    <a class='left-prev' id="prev-link" href="sparknlp.annotator.XlnetEmbeddings.html" title="previous page">sparknlp.annotator.XlnetEmbeddings</a>
+    <a class='left-prev' id="prev-link" href="sparknlp.annotator.XlnetForTokenClassification.html" title="previous page">sparknlp.annotator.XlnetForTokenClassification</a>
     <a class='right-next' id="next-link" href="sparknlp.base.html" title="next page">sparknlp.base</a>
 
               </div>
@@ -1434,7 +1459,7 @@ Spark ML.</p>
     
     <div class="footer-item">
       <p class="sphinx-version">
-Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.1.2.<br/>
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.2.0.<br/>
 </p>
     </div>
     
