@@ -1,2 +1,2 @@
-docs/en/alab/quickstart.md
-docs/en/alab/quickstart.md
+docs/en/alab/install.md
+docs/en/alab/install.md
