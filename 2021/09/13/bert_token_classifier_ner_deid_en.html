@@ -26,7 +26,8 @@
 <meta name="msapplication-TileColor" content="#ffc40d"><meta name="msapplication-config" content="/assets/browserconfig.xml">
 
 <meta name="theme-color" content="#ffffff">
-<!-- end favicons snippet --><link rel="stylesheet" href="/assets/css/main.css"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" ><!-- start custom head snippets -->
+<!-- end favicons snippet --><link rel="stylesheet" href="/assets/css/main.css"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" >
+<link rel="stylesheet" href="/static/models.css" /><!-- start custom head snippets -->
  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"> 
  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
 <!-- end custom head snippets -->
@@ -404,7 +405,7 @@
               <div class="col-main cell cell--auto"><!-- start custom main top snippet -->
 
 <!-- end custom main top snippet --><article><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script><div class="article__header"><div class="header-author"><div class="article__info clearfix"><ul class="right-col menu"><li><i class="far fa-user"></i> <span>John Snow Labs</span></li><li><i class="far fa-calendar-alt"></i> <span>Sep 13, 2021</span>
-            </li></ul></div><meta itemprop="author" content=""/><meta itemprop="datePublished" content="2021-09-13T00:00:00+00:00"></div><header><h1>Detect PHI for Deidentification (BertForTokenClassifier)</h1></header></div><meta itemprop="headline" content="Detect PHI for Deidentification (BertForTokenClassifier)"><div class="article__info tags_box clearfix"><ul class="left-col menu"><li>en</li><li>licensed</li></ul></div><meta itemprop="author" content=""/><meta itemprop="datePublished" content="2021-09-13T00:00:00+00:00">
+            </li></ul></div><meta itemprop="author" content=""/><meta itemprop="datePublished" content="2021-09-13T00:00:00+00:00"></div><header class="main-docs"><h1>Detect PHI for Deidentification (BertForTokenClassifier)</h1></header></div><meta itemprop="headline" content="Detect PHI for Deidentification (BertForTokenClassifier)"><div class="article__info tags_box clearfix"><ul class="left-col menu"><li>en</li><li>licensed</li></ul></div><meta itemprop="author" content=""/><meta itemprop="datePublished" content="2021-09-13T00:00:00+00:00">
     <meta itemprop="keywords" content="en,licensed"><div class="js-article-content"><div class="model-wrap"><div class="layout--article"><!-- start custom article top snippet -->
 
 <!-- end custom article top snippet --><div class="article__content" itemprop="articleBody"><h2 id="description">Description</h2>
@@ -549,8 +550,6 @@
         B-DEVICE       0.68      0.66      0.67        35
         B-DOCTOR       0.93      0.91      0.92      3609
          B-EMAIL       0.92      1.00      0.96        11
-           B-FAX       0.00      0.00      0.00         2
-    B-HEALTHPLAN       0.00      0.00      0.00         3
       B-HOSPITAL       0.94      0.90      0.92      2225
          B-IDNUM       0.88      0.64      0.74      1185
 B-LOCATION-OTHER       0.83      0.60      0.70        25
@@ -563,23 +562,17 @@ B-LOCATION-OTHER       0.83      0.60      0.70        25
         B-STREET       0.98      0.99      0.99       184
       B-USERNAME       0.96      0.78      0.86       357
            B-ZIP       0.96      0.96      0.96       444
-           I-AGE       0.00      0.00      0.00        33
           I-CITY       0.74      0.83      0.78       138
-       I-COUNTRY       0.86      0.32      0.46        19
           I-DATE       0.98      0.96      0.97       955
         I-DEVICE       1.00      1.00      1.00         3
         I-DOCTOR       0.92      0.98      0.95      3134
-           I-FAX       0.00      0.00      0.00        17
-    I-HEALTHPLAN       0.00      0.00      0.00         1
       I-HOSPITAL       0.95      0.92      0.93      1322
-         I-IDNUM       0.52      0.24      0.33        45
 I-LOCATION-OTHER       1.00      1.00      1.00         8
  I-MEDICALRECORD       1.00      0.91      0.95        23
   I-ORGANIZATION       0.98      0.61      0.75        77
        I-PATIENT       0.89      0.81      0.85      1281
          I-PHONE       0.97      0.96      0.97       374
     I-PROFESSION       0.95      0.82      0.88       232
-         I-STATE       1.00      0.06      0.12        16
         I-STREET       0.98      0.98      0.98       391
                O       1.00      1.00      1.00    585606
 
@@ -749,7 +742,7 @@ hr.code-selector-underlie {
 <footer class="footer py-4 js-page-footer">
   <div class="main"><div itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content=""><meta itemprop="url" content="/"></div><div class="site-info mt-2">
-      <div>© 2021 John Snow Labs Inc.
+      <div>© 2022 John Snow Labs Inc.
         <a href="http://www.johnsnowlabs.com/terms-of-service">Terms of Service</a> | <a href="http://www.johnsnowlabs.com/privacy-policy/">Privacy Policy</a>
       </div>
     </div>

@@ -27,7 +27,8 @@
 <meta name="msapplication-TileColor" content="#ffc40d"><meta name="msapplication-config" content="/assets/browserconfig.xml">
 
 <meta name="theme-color" content="#ffffff">
-<!-- end favicons snippet --><link rel="stylesheet" href="/assets/css/main.css"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" ><!-- start custom head snippets -->
+<!-- end favicons snippet --><link rel="stylesheet" href="/assets/css/main.css"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" >
+<link rel="stylesheet" href="/static/models.css" /><!-- start custom head snippets -->
  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"> 
  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
 <!-- end custom head snippets -->
@@ -402,7 +403,7 @@
     <ul class="sidemenu">
       <li class="free_link"><strong>Spark NLP: English</strong><span>Free</span></li>
       <li      >
-        <a href="/infer_meaning_intent">Infer Meaning &amp; Intent</a>
+        <a href="/infer_meaning_intent">Infer Meaning & Intent</a>
       </li>
       <li      >
         <a href="/classify_documents">Classify Documents</a>
@@ -449,19 +450,34 @@
         <a href="/resolve_entities_codes">Resolve Entities to Codes</a>
       </li>
       <li      >
-        <a href="/recognize_social_determinants">Recognize Social Determinants</a>
+        <a href="/extract_relationships">Extract Relationships</a>
       </li>
       <li      >
-        <a href="/extract_relationships">Extract Relationships</a>
+        <a href="/radiology">Radiology</a>
+      </li>
+      <li      >
+        <a href="/oncology">Oncology</a>
+      </li>
+      <li      >
+        <a href="/social_determinants">Social Determinants</a>
       </li>
       <li      >
         <a href="/split_clean_medical_text">Split &amp; Clean Medical Text</a>
       </li>
       <li      >
-        <a href="/analyze_non_english_medical_text">Analyze non-English Medical Text</a>
+        <a href="/analyze_medical_text_spanish">Analyze Medical Texts in Spanish</a>
+      </li>
+      <li      >
+        <a href="/analyze_medical_text_german">Analyze Medical Texts in German</a>
+      </li>
+      <li      >
+        <a href="/analyze_financial_models">Analyze Financial Models</a>
       </li>
       <li      >
         <a href="/medical_risk_scoring">Medical Risk Scoring</a>
+      </li>
+      <li      >
+        <a href="/classify_medical_texts">Classify Medical Texts</a>
       </li>
       <li><strong>Spark OCR</strong></li>
       <li      >
@@ -489,11 +505,11 @@
 
               <div class="col-main cell cell--auto"><!-- start custom main top snippet -->
 
-<!-- end custom main top snippet --><article itemscope itemtype="http://schema.org/WebPage"><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script><div class="article__header"><header><h1>Spark NLP in Action</h1></header></div><meta itemprop="headline" content="Spark NLP in Action"><meta itemprop="author" content=""/><div class="js-article-content"><!-- Do not use auto intent in this file. -->
+<!-- end custom main top snippet --><article itemscope itemtype="http://schema.org/WebPage"><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script><div class="article__header"><header class="main-docs"><h1>Spark NLP in Action</h1></header></div><meta itemprop="headline" content="Spark NLP in Action"><meta itemprop="author" content=""/><div class="js-article-content"><!-- Do not use auto intent in this file. -->
 <div class="layout--landing"><div class="demopage"><section class="hero section-row hero--center" id="hero-1">
 
       <div class="">
-        <hr />
+        
 <div class="subtitle">Spark NLP - World Languages <img src="/assets/images/arrow.svg" /><strong>European Languages</strong></div><div class="grid--container main-big" id="panels"><div class="tab-wrapper-inner"><div class="tab-item ">
               <div class="tab-item-inner"><figure class="tab_fig_blue">
                     <img src="/assets/images/United_Kingdom.png" />
@@ -649,13 +665,85 @@
                       href="https://github.com/JohnSnowLabs/spark-nlp-workshop/blob/master/tutorials/streamlit_notebooks/healthcare/NER_LEGAL_PT.ipynb">Colab Netbook</a></li></ul></div> 
             </div><div class="tab-item ">
               <div class="tab-item-inner"><figure class="tab_fig_blue">
-                    <img src="/assets/images/Detect_Entities_in_tweets.svg" />
+                    <img src="/assets/images/Analyze_sentiment_French_texts.svg" />
                   </figure>
                   <figure class="tab_fig_white">
-                    <img src="/assets/images/Detect_Entities_in_tweets_f.svg" />
-                  </figure><div class="tab-item-title">Detect Entities in tweets</div><div class="tab-description">This demo shows how to extract Named Entities, as PER, ORG or LOC, from tweets.</div><ul class="tab-menu"><li><a id="detect_entities_tweets" class="button button--normal button--pill button--lg"
-                      href="https://demo.johnsnowlabs.com/public/NER_BTC/">Live Demo</a></li><li><a id="detect_entities_tweets" class="button button--blue_btn button--pill button--lg"
-                      href="https://colab.research.google.com/github/JohnSnowLabs/spark-nlp-workshop/blob/master/tutorials/streamlit_notebooks/NER_BTC.ipynb">Colab Netbook</a></li></ul></div> 
+                    <img src="/assets/images/Analyze_sentiment_French_texts_f.svg" />
+                  </figure><div class="tab-item-title">Analyze sentiment in French texts</div><div class="tab-description">This demo shows how sentiment can be identified (positive or negative) in French texts.</div><ul class="tab-menu"><li><a id="analyze_sentiment_french_texts" class="button button--normal button--pill button--lg"
+                      href="https://demo.johnsnowlabs.com/public/SENTIMENT_FR/">Live Demo</a></li><li><a id="analyze_sentiment_french_texts" class="button button--blue_btn button--pill button--lg"
+                      href="https://colab.research.google.com/github/JohnSnowLabs/spark-nlp-workshop/blob/master/tutorials/streamlit_notebooks/CLASSIFICATION_Fr_Sentiment.ipynb">Colab Netbook</a></li></ul></div> 
+            </div><div class="tab-item ">
+              <div class="tab-item-inner"><figure class="tab_fig_blue">
+                    <img src="/assets/images/Recognize_entities_in__Scandinavian_languages.svg" />
+                  </figure>
+                  <figure class="tab_fig_white">
+                    <img src="/assets/images/Recognize_entities_in__Scandinavian_languages_f.svg" />
+                  </figure><div class="tab-item-title">Recognize entities in  Scandinavian languages</div><div class="tab-description">This demo shows how to extract people, locations and organizations from texts written in Scandinavian languages.</div><ul class="tab-menu"><li><a id="recognize_entities_scandinavian_languages" class="button button--normal button--pill button--lg"
+                      href="https://demo.johnsnowlabs.com/public/NER_SCANDINAVIAN/">Live Demo</a></li><li><a id="recognize_entities_scandinavian_languages" class="button button--blue_btn button--pill button--lg"
+                      href="https://colab.research.google.com/github/JohnSnowLabs/spark-nlp-workshop/blob/master/tutorials/streamlit_notebooks/NER.ipynb">Colab Netbook</a></li></ul></div> 
+            </div><div class="tab-item ">
+              <div class="tab-item-inner"><figure class="tab_fig_blue">
+                    <img src="/assets/images/Recognize_entities_in_10_different_high_resourced_languages.svg" />
+                  </figure>
+                  <figure class="tab_fig_white">
+                    <img src="/assets/images/Recognize_entities_in_10_different_high_resourced_languages_f.svg" />
+                  </figure><div class="tab-item-title">Recognize entities in 10 different high resourced languages</div><div class="tab-description">This demo shows how to extract people, locations and organizations from texts written in up to 10 different languages (Arabic, Chinese, French, …).</div><ul class="tab-menu"><li><a id="recognize_entities_different_high_resourced_languages" class="button button--normal button--pill button--lg"
+                      href="https://demo.johnsnowlabs.com/public/NER_HRL/">Live Demo</a></li><li><a id="recognize_entities_different_high_resourced_languages" class="button button--blue_btn button--pill button--lg"
+                      href="https://colab.research.google.com/github/JohnSnowLabs/spark-nlp-workshop/blob/master/tutorials/streamlit_notebooks/NER_HRL.ipynb">Colab Netbook</a></li></ul></div> 
+            </div><div class="tab-item ">
+              <div class="tab-item-inner"><figure class="tab_fig_blue">
+                    <img src="/assets/images/Toxic_content_classifier_for_russian.svg" />
+                  </figure>
+                  <figure class="tab_fig_white">
+                    <img src="/assets/images/Toxic_content_classifier_for_russian_f.svg" />
+                  </figure><div class="tab-item-title">Toxic Content Classifier for Russian</div><div class="tab-description">This demo shows how to identify if a Russian text contains toxic content or not.</div><ul class="tab-menu"><li><a id="toxic_content_classifier_for_russian" class="button button--normal button--pill button--lg"
+                      href="https://demo.johnsnowlabs.com/public/CLASSIFICATION_RU_TOXIC/">Live Demo</a></li><li><a id="toxic_content_classifier_for_russian" class="button button--blue_btn button--pill button--lg"
+                      href="https://colab.research.google.com/github/JohnSnowLabs/spark-nlp-workshop/blob/master/tutorials/streamlit_notebooks/CLASSIFICATION_RU_TOXIC.ipynb">Colab Netbook</a></li></ul></div> 
+            </div><div class="tab-item ">
+              <div class="tab-item-inner"><figure class="tab_fig_blue">
+                    <img src="/assets/images/Identify_sentiments_in_Geman_texts.svg" />
+                  </figure>
+                  <figure class="tab_fig_white">
+                    <img src="/assets/images/Identify_sentiments_in_Geman_texts_f.svg" />
+                  </figure><div class="tab-item-title">Identify sentiments in German texts.</div><div class="tab-description">This demo shows whether the sentiments are positive or negative in German texts.</div><ul class="tab-menu"><li><a id="identify_sentiments_German_texts" class="button button--normal button--pill button--lg"
+                      href="https://demo.johnsnowlabs.com/public/SENTIMENT_DE/">Live Demo</a></li><li><a id="identify_sentiments_German_texts" class="button button--blue_btn button--pill button--lg"
+                      href="https://colab.research.google.com/github/JohnSnowLabs/spark-nlp-workshop/blob/master/tutorials/streamlit_notebooks/CLASSIFICATION_De_SENTIMENT.ipynb">Colab Netbook</a></li></ul></div> 
+            </div><div class="tab-item ">
+              <div class="tab-item-inner"><figure class="tab_fig_blue">
+                    <img src="/assets/images/Identify_sentiments_in_French_texts.svg" />
+                  </figure>
+                  <figure class="tab_fig_white">
+                    <img src="/assets/images/Identify_sentiments_in_French_texts_f.svg" />
+                  </figure><div class="tab-item-title">Identify sentiments in French texts</div><div class="tab-description">This demo shows whether the sentiments are positive or negative in French texts.</div><ul class="tab-menu"><li><a id="identify_sentiments_french_texts" class="button button--normal button--pill button--lg"
+                      href="https://demo.johnsnowlabs.com/public/SENTIMENT_FR/">Live Demo</a></li><li><a id="identify_sentiments_french_texts" class="button button--blue_btn button--pill button--lg"
+                      href="https://colab.research.google.com/github/JohnSnowLabs/spark-nlp-workshop/blob/master/tutorials/streamlit_notebooks/CLASSIFICATION_Fr_Sentiment.ipynb">Colab Netbook</a></li></ul></div> 
+            </div><div class="tab-item ">
+              <div class="tab-item-inner"><figure class="tab_fig_blue">
+                    <img src="/assets/images/Spell_Checking.svg" />
+                  </figure>
+                  <figure class="tab_fig_white">
+                    <img src="/assets/images/Spell_Checking_f.svg" />
+                  </figure><div class="tab-item-title">Icelandic Typo Detector</div><div class="tab-description">This demo shows how to detect typos in Icelandic texts.</div><ul class="tab-menu"><li><a id="icelandic_typo_detector" class="button button--normal button--pill button--lg"
+                      href="https://demo.johnsnowlabs.com/public/TYPO_DETECTOR_IS/">Live Demo</a></li><li><a id="icelandic_typo_detector" class="button button--blue_btn button--pill button--lg"
+                      href="https://colab.research.google.com/github/JohnSnowLabs/spark-nlp-workshop/blob/master/tutorials/streamlit_notebooks/DistilBertForTokenClassification.ipynb">Colab Netbook</a></li></ul></div> 
+            </div><div class="tab-item ">
+              <div class="tab-item-inner"><figure class="tab_fig_blue">
+                    <img src="/assets/images/Aspect_based_sentiment_analysis_for_restaurants.svg" />
+                  </figure>
+                  <figure class="tab_fig_white">
+                    <img src="/assets/images/Aspect_based_sentiment_analysis_for_restaurants_f.svg" />
+                  </figure><div class="tab-item-title">Analyze Sentiment in Danish Texts</div><div class="tab-description">This demo shows how to identify positive, negative or neutral sentiment in Danish texts.</div><ul class="tab-menu"><li><a id="analyze_sentiment_danish_texts" class="button button--normal button--pill button--lg"
+                      href="https://demo.johnsnowlabs.com/public/SENTIMENT_DA/">Live Demo</a></li><li><a id="analyze_sentiment_danish_texts" class="button button--blue_btn button--pill button--lg"
+                      href="https://colab.research.google.com/github/JohnSnowLabs/spark-nlp-workshop/blob/master/tutorials/streamlit_notebooks/BertForSequenceClassification.ipynb">Colab Netbook</a></li></ul></div> 
+            </div><div class="tab-item ">
+              <div class="tab-item-inner"><figure class="tab_fig_blue">
+                    <img src="/assets/images/Lemmatizer_for_European_Languages.svg" />
+                  </figure>
+                  <figure class="tab_fig_white">
+                    <img src="/assets/images/Lemmatizer_for_European_Languages_f.svg" />
+                  </figure><div class="tab-item-title">Lemmatizer for European Languages</div><div class="tab-description">This demo shows how to lemmatize documents of European languages.</div><ul class="tab-menu"><li><a id="lemmatizer_european_languages" class="button button--normal button--pill button--lg"
+                      href="https://demo.johnsnowlabs.com/public/LEMMATIZER_EUROPEAN/">Live Demo</a></li><li><a id="lemmatizer_european_languages" class="button button--blue_btn button--pill button--lg"
+                      href="https://colab.research.google.com/github/JohnSnowLabs/spark-nlp-workshop/blob/master/tutorials/Certification_Trainings/Public/2.Text_Preprocessing_with_SparkNLP_Annotators_Transformers.ipynb">Colab Netbook</a></li></ul></div> 
             </div></div></div></div> </section></div>
 </div>
 
@@ -667,7 +755,7 @@
 <footer class="footer py-4 js-page-footer">
   <div class="main"><div itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content=""><meta itemprop="url" content="/"></div><div class="site-info mt-2">
-      <div>© 2021 John Snow Labs Inc.
+      <div>© 2022 John Snow Labs Inc.
         <a href="http://www.johnsnowlabs.com/terms-of-service">Terms of Service</a> | <a href="http://www.johnsnowlabs.com/privacy-policy/">Privacy Policy</a>
       </div>
     </div>

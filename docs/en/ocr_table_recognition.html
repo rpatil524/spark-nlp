@@ -27,7 +27,8 @@
 <meta name="msapplication-TileColor" content="#ffc40d"><meta name="msapplication-config" content="/assets/browserconfig.xml">
 
 <meta name="theme-color" content="#ffffff">
-<!-- end favicons snippet --><link rel="stylesheet" href="/assets/css/main.css"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" ><!-- start custom head snippets -->
+<!-- end favicons snippet --><link rel="stylesheet" href="/assets/css/main.css"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" >
+<link rel="stylesheet" href="/static/models.css" /><!-- start custom head snippets -->
  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"> 
  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
 <!-- end custom head snippets -->
@@ -520,7 +521,7 @@
     <li><a href="/docs">Documentation</a></li>
     <li>Table recognition</li>
   </ul>
-</div></div><header><h1>Table recognition</h1></header><span class="split-space">&nbsp;</span>
+</div></div><header class="main-docs"><h1>Table recognition</h1></header><span class="split-space">&nbsp;</span>
           <a class="edit-on-github"
             title="Edit on Github"
             href="https://github.com/johnsnowlabs/spark-nlp/tree/master/docs/en/ocr_table_recognition.md">
@@ -529,8 +530,8 @@
 
 <!-- end custom article top snippet --><div class="article__content" itemprop="articleBody"><h2 id="imagetabledetector">ImageTableDetector</h2>
 
-<p><code class="language-plaintext highlighter-rouge">ImageTableDetector</code> is a DL model for detect tables on the image.
-It based on CascadeTabNet which used Cascade mask Region-based CNN High-Resolution Network (Cascade mask R-CNN HRNet).</p>
+<p><code class="language-plaintext highlighter-rouge">ImageTableDetector</code> is a DL model for detecting tables on the image.
+It’s based on CascadeTabNet which used Cascade mask Region-based CNN High-Resolution Network (Cascade mask R-CNN HRNet).</p>
 
 <h4 id="input-columns">Input Columns</h4>
 
@@ -688,8 +689,8 @@ It based on CascadeTabNet which used Cascade mask Region-based CNN High-Resoluti
 
 <h2 id="imagetablecelldetector">ImageTableCellDetector</h2>
 
-<p><code class="language-plaintext highlighter-rouge">ImageTableCellDetector</code> detect cells on image with table. It based on
-image processing algorithm by detecting horizontal and vertical lines.</p>
+<p><code class="language-plaintext highlighter-rouge">ImageTableCellDetector</code> detect cells in a table image. It’s based on an
+image processing algorithm that detects horizontal and vertical lines.</p>
 
 <p>Current implementation support few algorithm for extract cells:</p>
 <ul>
@@ -1268,7 +1269,7 @@ hr.code-selector-underlie {
 <footer class="footer py-4 js-page-footer">
   <div class="main"><div itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content=""><meta itemprop="url" content="/"></div><div class="site-info mt-2">
-      <div>© 2021 John Snow Labs Inc.
+      <div>© 2022 John Snow Labs Inc.
         <a href="http://www.johnsnowlabs.com/terms-of-service">Terms of Service</a> | <a href="http://www.johnsnowlabs.com/privacy-policy/">Privacy Policy</a>
       </div>
     </div>
