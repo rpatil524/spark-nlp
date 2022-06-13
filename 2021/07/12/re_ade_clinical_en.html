@@ -404,7 +404,13 @@
 
               <div class="col-main cell cell--auto"><!-- start custom main top snippet -->
 
-<!-- end custom main top snippet --><article><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script><div class="article__header"><div class="header-author"><div class="article__info clearfix"><ul class="right-col menu"><li><i class="far fa-user"></i> <span>John Snow Labs</span></li><li><i class="far fa-calendar-alt"></i> <span>Jul 12, 2021</span>
+<!-- end custom main top snippet --><article><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script><div class="article__header"><div class="header-author"><div class="article__info clearfix"><div class="left-col">
+            <a class="edit-on-github-btn" target="_blank" rel="alternate"
+               href="https://github.com/johnsnowlabs/spark-nlp/tree/master/docs/_posts/HashamUlHaq/2021-07-12-re_ade_clinical_en.md">
+              <span class="fab fa-github"></span>
+              <span class="edit-on-github-label">Edit on GitHub</span>
+            </a>
+        </div><ul class="right-col menu"><li><i class="far fa-user"></i> <span>John Snow Labs</span></li><li><i class="far fa-calendar-alt"></i> <span>Jul 12, 2021</span>
             </li></ul></div><meta itemprop="author" content=""/><meta itemprop="datePublished" content="2021-07-12T00:00:00+00:00"></div><header class="main-docs"><h1>Relation extraction between Drugs and ADE</h1></header></div><meta itemprop="headline" content="Relation extraction between Drugs and ADE"><div class="article__info tags_box clearfix"><ul class="left-col menu"><li>licensed</li><li>clinical</li><li>en</li><li>relation_extraction</li></ul></div><meta itemprop="author" content=""/><meta itemprop="datePublished" content="2021-07-12T00:00:00+00:00">
     <meta itemprop="keywords" content="licensed,clinical,en,relation_extraction"><div class="js-article-content"><div class="model-wrap"><div class="layout--article"><!-- start custom article top snippet -->
 
@@ -422,10 +428,32 @@
 
 <h2 id="how-to-use">How to use</h2>
 
+<p>In the table below, <code class="language-plaintext highlighter-rouge">re_ade_clinical</code> RE model, its labels, optimal NER model, and meaningful relation pairs are illustrated.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">RE MODEL</th>
+      <th style="text-align: center">RE MODEL LABES</th>
+      <th style="text-align: center">NER MODEL</th>
+      <th>RE PAIRS</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">re_ade_clinical</td>
+      <td style="text-align: center">0,1</td>
+      <td style="text-align: center">ner_ade_clinical</td>
+      <td>[“ade-drug”,<br /> ”drug-ade”]</td>
+    </tr>
+  </tbody>
+</table>
+
 <div class="tabs-box">
   <div class="top_tab_li">   
     <button class="tab-li code-selector-active python-button">Python</button><button class="tab-li code-selector-un-active scala-button">Scala</button><button class="tab-li code-selector-un-active nlu-button">NLU</button>
 </div>
+
   <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">...</span>
 
 <span class="n">words_embedder</span> <span class="o">=</span> <span class="n">WordEmbeddingsModel</span><span class="p">()</span> \

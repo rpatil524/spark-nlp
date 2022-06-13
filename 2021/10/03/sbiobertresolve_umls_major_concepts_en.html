@@ -404,7 +404,13 @@
 
               <div class="col-main cell cell--auto"><!-- start custom main top snippet -->
 
-<!-- end custom main top snippet --><article><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script><div class="article__header"><div class="header-author"><div class="article__info clearfix"><ul class="right-col menu"><li><i class="far fa-user"></i> <span>John Snow Labs</span></li><li><i class="far fa-calendar-alt"></i> <span>Oct 03, 2021</span>
+<!-- end custom main top snippet --><article><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script><div class="article__header"><div class="header-author"><div class="article__info clearfix"><div class="left-col">
+            <a class="edit-on-github-btn" target="_blank" rel="alternate"
+               href="https://github.com/johnsnowlabs/spark-nlp/tree/master/docs/_posts/HashamUlHaq/2021-10-03-sbiobertresolve_umls_major_concepts_en.md">
+              <span class="fab fa-github"></span>
+              <span class="edit-on-github-label">Edit on GitHub</span>
+            </a>
+        </div><ul class="right-col menu"><li><i class="far fa-user"></i> <span>John Snow Labs</span></li><li><i class="far fa-calendar-alt"></i> <span>Oct 03, 2021</span>
             </li></ul></div><meta itemprop="author" content=""/><meta itemprop="datePublished" content="2021-10-03T00:00:00+00:00"></div><header class="main-docs"><h1>Sentence Entity Resolver for UMLS CUI Codes</h1></header></div><meta itemprop="headline" content="Sentence Entity Resolver for UMLS CUI Codes"><div class="article__info tags_box clearfix"><ul class="left-col menu"><li>entity_resolution</li><li>licensed</li><li>clinical</li><li>en</li></ul></div><meta itemprop="author" content=""/><meta itemprop="datePublished" content="2021-10-03T00:00:00+00:00">
     <meta itemprop="keywords" content="entity_resolution,licensed,clinical,en"><div class="js-article-content"><div class="model-wrap"><div class="layout--article"><!-- start custom article top snippet -->
 
@@ -422,10 +428,13 @@
 
 <h2 id="how-to-use">How to use</h2>
 
+<p><code class="language-plaintext highlighter-rouge">sbiobertresolve_umls_major_concepts</code> resolver model must be used with <code class="language-plaintext highlighter-rouge">sbiobert_base_cased_mli</code> as embeddings <code class="language-plaintext highlighter-rouge">ner_jsl</code> as NER model. <code class="language-plaintext highlighter-rouge">Cerebrovascular_Disease, Communicable_Disease, Diabetes, Disease_Syndrome_Disorder, Heart_Disease, Hyperlipidemia, Hypertension, Injury_or_Poisoning, Kidney_Disease, Medical-Device, Obesity, Oncological, Overweight, Psychological_Condition, Symptom, VS_Finding, ImagingFindings, EKG_Findings</code> set in <code class="language-plaintext highlighter-rouge">.setWhiteList()</code>.</p>
+
 <div class="tabs-box">
   <div class="top_tab_li">   
     <button class="tab-li code-selector-active python-button">Python</button><button class="tab-li code-selector-un-active scala-button">Scala</button><button class="tab-li code-selector-un-active nlu-button">NLU</button>
 </div>
+
   <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">...</span>
 <span class="n">chunk2doc</span> <span class="o">=</span> <span class="n">Chunk2Doc</span><span class="p">().</span><span class="n">setInputCols</span><span class="p">(</span><span class="s">"ner_chunk"</span><span class="p">).</span><span class="n">setOutputCol</span><span class="p">(</span><span class="s">"ner_chunk_doc"</span><span class="p">)</span>
 

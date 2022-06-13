@@ -404,7 +404,13 @@
 
               <div class="col-main cell cell--auto"><!-- start custom main top snippet -->
 
-<!-- end custom main top snippet --><article><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script><div class="article__header"><div class="header-author"><div class="article__info clearfix"><ul class="right-col menu"><li><i class="far fa-user"></i> <span>John Snow Labs</span></li><li><i class="far fa-calendar-alt"></i> <span>Nov 01, 2021</span>
+<!-- end custom main top snippet --><article><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script><div class="article__header"><div class="header-author"><div class="article__info clearfix"><div class="left-col">
+            <a class="edit-on-github-btn" target="_blank" rel="alternate"
+               href="https://github.com/johnsnowlabs/spark-nlp/tree/master/docs/_posts/muhammetsnts/2021-11-01-sbiobertresolve_icd10cm_augmented_billable_hcc_en.md">
+              <span class="fab fa-github"></span>
+              <span class="edit-on-github-label">Edit on GitHub</span>
+            </a>
+        </div><ul class="right-col menu"><li><i class="far fa-user"></i> <span>John Snow Labs</span></li><li><i class="far fa-calendar-alt"></i> <span>Nov 01, 2021</span>
             </li></ul></div><meta itemprop="author" content=""/><meta itemprop="datePublished" content="2021-11-01T00:00:00+00:00"></div><header class="main-docs"><h1>Sentence Entity Resolver for Billable ICD10-CM HCC Codes</h1></header></div><meta itemprop="headline" content="Sentence Entity Resolver for Billable ICD10-CM HCC Codes"><div class="article__info tags_box clearfix"><ul class="left-col menu"><li>icd10cm</li><li>hcc</li><li>entity_resolution</li><li>licensed</li><li>en</li></ul></div><meta itemprop="author" content=""/><meta itemprop="datePublished" content="2021-11-01T00:00:00+00:00">
     <meta itemprop="keywords" content="icd10cm,hcc,entity_resolution,licensed,en"><div class="js-article-content"><div class="model-wrap"><div class="layout--article"><!-- start custom article top snippet -->
 
@@ -419,6 +425,8 @@
 <a href="https://s3.amazonaws.com/auxdata.johnsnowlabs.com/clinical/models/sbiobertresolve_icd10cm_augmented_billable_hcc_en_3.3.1_2.4_1635784379929.zip" class="button button-orange button-orange-trans arr button-icon">Download</a></p>
 
 <h2 id="how-to-use">How to use</h2>
+
+<p><code class="language-plaintext highlighter-rouge">sbiobertresolve_icd10cm_augmented_billable_hcc</code> resolver model must be used with <code class="language-plaintext highlighter-rouge">sbiobert_base_cased_mli</code> as embeddings <code class="language-plaintext highlighter-rouge">ner_clinical</code> as NER model. <code class="language-plaintext highlighter-rouge">PROBLEM</code> set in <code class="language-plaintext highlighter-rouge">.setWhiteList()</code>.</p>
 
 <div class="tabs-box">
   <div class="top_tab_li">   
