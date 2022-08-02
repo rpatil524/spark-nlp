@@ -9,7 +9,7 @@
     j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-59JLR64');</script>
-<!-- End Google Tag Manager --><title>Marathi ALBERT Embeddings (from l3cube-pune)- Spark NLP Model</title><meta name="description" content="DescriptionPretrained ALBERT Embeddings model, uploaded to Hugging Face, adapted and imported into Spark NLP. marathi-albert is a Marathi model orginally tra...">
+<!-- End Google Tag Manager --><title>Marathi ALBERT Embeddings (v1)- Spark NLP Model</title><meta name="description" content="DescriptionPretrained ALBERT Embeddings model, uploaded to Hugging Face, adapted and imported into Spark NLP. marathi-albert is a Marathi model orginally tra...">
 <link rel="canonical" href="/2022/04/14/albert_embeddings_marathi_albert_mr_3_0.html"><link rel="alternate" type="application/rss+xml" title="Spark NLP" href="/feed.xml"><!-- start favicons snippet, use https://realfavicongenerator.net/ -->
 <!---->
 <!-- <link rel="apple-touch-icon" sizes="180x180" href="/fav.ico"> -->
@@ -411,7 +411,7 @@
               <span class="edit-on-github-label">Edit on GitHub</span>
             </a>
         </div><ul class="right-col menu"><li><i class="far fa-user"></i> <span>John Snow Labs</span></li><li><i class="far fa-calendar-alt"></i> <span>Apr 14, 2022</span>
-            </li></ul></div><meta itemprop="author" content=""/><meta itemprop="datePublished" content="2022-04-14T00:00:00+00:00"></div><header class="main-docs"><h1>Marathi ALBERT Embeddings (from l3cube-pune)</h1></header></div><meta itemprop="headline" content="Marathi ALBERT Embeddings (from l3cube-pune)"><div class="article__info tags_box clearfix"><ul class="left-col menu"><li>albert</li><li>embeddings</li><li>mr</li><li>open_source</li></ul></div><meta itemprop="author" content=""/><meta itemprop="datePublished" content="2022-04-14T00:00:00+00:00">
+            </li></ul></div><meta itemprop="author" content=""/><meta itemprop="datePublished" content="2022-04-14T00:00:00+00:00"></div><header class="main-docs"><h1>Marathi ALBERT Embeddings (v1)</h1></header></div><meta itemprop="headline" content="Marathi ALBERT Embeddings (v1)"><div class="article__info tags_box clearfix"><ul class="left-col menu"><li>albert</li><li>embeddings</li><li>mr</li><li>open_source</li></ul></div><meta itemprop="author" content=""/><meta itemprop="datePublished" content="2022-04-14T00:00:00+00:00">
     <meta itemprop="keywords" content="albert,embeddings,mr,open_source"><div class="js-article-content"><div class="model-wrap"><div class="layout--article"><!-- start custom article top snippet -->
 
 <!-- end custom article top snippet --><div class="article__content" itemprop="articleBody"><h2 id="description">Description</h2>
@@ -429,17 +429,17 @@
     <button class="tab-li code-selector-active python-button">Python</button><button class="tab-li code-selector-un-active scala-button">Scala</button><button class="tab-li code-selector-un-active nlu-button">NLU</button>
 </div>
   <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">documentAssembler</span> <span class="o">=</span> <span class="n">DocumentAssembler</span><span class="p">()</span> \
-    <span class="p">.</span><span class="n">setInputCol</span><span class="p">(</span><span class="s">"text"</span><span class="p">)</span> \
-    <span class="p">.</span><span class="n">setOutputCol</span><span class="p">(</span><span class="s">"document"</span><span class="p">)</span>
+<span class="p">.</span><span class="n">setInputCol</span><span class="p">(</span><span class="s">"text"</span><span class="p">)</span> \
+<span class="p">.</span><span class="n">setOutputCol</span><span class="p">(</span><span class="s">"document"</span><span class="p">)</span>
 
 <span class="n">tokenizer</span> <span class="o">=</span> <span class="n">Tokenizer</span><span class="p">()</span> \
-    <span class="p">.</span><span class="n">setInputCols</span><span class="p">(</span><span class="s">"document"</span><span class="p">)</span> \
-    <span class="p">.</span><span class="n">setOutputCol</span><span class="p">(</span><span class="s">"token"</span><span class="p">)</span>
-  
+<span class="p">.</span><span class="n">setInputCols</span><span class="p">(</span><span class="s">"document"</span><span class="p">)</span> \
+<span class="p">.</span><span class="n">setOutputCol</span><span class="p">(</span><span class="s">"token"</span><span class="p">)</span>
+
 <span class="n">embeddings</span> <span class="o">=</span> <span class="n">AlbertEmbeddings</span><span class="p">.</span><span class="n">pretrained</span><span class="p">(</span><span class="s">"albert_embeddings_marathi_albert"</span><span class="p">,</span><span class="s">"mr"</span><span class="p">)</span> \
-    <span class="p">.</span><span class="n">setInputCols</span><span class="p">([</span><span class="s">"document"</span><span class="p">,</span> <span class="s">"token"</span><span class="p">])</span> \
-    <span class="p">.</span><span class="n">setOutputCol</span><span class="p">(</span><span class="s">"embeddings"</span><span class="p">)</span>
-    
+<span class="p">.</span><span class="n">setInputCols</span><span class="p">([</span><span class="s">"document"</span><span class="p">,</span> <span class="s">"token"</span><span class="p">])</span> \
+<span class="p">.</span><span class="n">setOutputCol</span><span class="p">(</span><span class="s">"embeddings"</span><span class="p">)</span>
+
 <span class="n">pipeline</span> <span class="o">=</span> <span class="n">Pipeline</span><span class="p">(</span><span class="n">stages</span><span class="o">=</span><span class="p">[</span><span class="n">documentAssembler</span><span class="p">,</span> <span class="n">tokenizer</span><span class="p">,</span> <span class="n">embeddings</span><span class="p">])</span>
 
 <span class="n">data</span> <span class="o">=</span> <span class="n">spark</span><span class="p">.</span><span class="n">createDataFrame</span><span class="p">([[</span><span class="s">"मला स्पार्क एनएलपी आवडते"</span><span class="p">]]).</span><span class="n">toDF</span><span class="p">(</span><span class="s">"text"</span><span class="p">)</span>
@@ -447,16 +447,16 @@
 <span class="n">result</span> <span class="o">=</span> <span class="n">pipeline</span><span class="p">.</span><span class="n">fit</span><span class="p">(</span><span class="n">data</span><span class="p">).</span><span class="n">transform</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
 </code></pre></div>  </div>
   <div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">val</span> <span class="nv">documentAssembler</span> <span class="k">=</span> <span class="k">new</span> <span class="nc">DocumentAssembler</span><span class="o">()</span> 
-      <span class="o">.</span><span class="py">setInputCol</span><span class="o">(</span><span class="s">"text"</span><span class="o">)</span> 
-      <span class="o">.</span><span class="py">setOutputCol</span><span class="o">(</span><span class="s">"document"</span><span class="o">)</span>
- 
+<span class="o">.</span><span class="py">setInputCol</span><span class="o">(</span><span class="s">"text"</span><span class="o">)</span> 
+<span class="o">.</span><span class="py">setOutputCol</span><span class="o">(</span><span class="s">"document"</span><span class="o">)</span>
+
 <span class="k">val</span> <span class="nv">tokenizer</span> <span class="k">=</span> <span class="k">new</span> <span class="nc">Tokenizer</span><span class="o">()</span> 
-    <span class="o">.</span><span class="py">setInputCols</span><span class="o">(</span><span class="nc">Array</span><span class="o">(</span><span class="s">"document"</span><span class="o">))</span>
-    <span class="o">.</span><span class="py">setOutputCol</span><span class="o">(</span><span class="s">"token"</span><span class="o">)</span>
+<span class="o">.</span><span class="py">setInputCols</span><span class="o">(</span><span class="nc">Array</span><span class="o">(</span><span class="s">"document"</span><span class="o">))</span>
+<span class="o">.</span><span class="py">setOutputCol</span><span class="o">(</span><span class="s">"token"</span><span class="o">)</span>
 
 <span class="k">val</span> <span class="nv">embeddings</span> <span class="k">=</span> <span class="nv">AlbertEmbeddings</span><span class="o">.</span><span class="py">pretrained</span><span class="o">(</span><span class="s">"albert_embeddings_marathi_albert"</span><span class="o">,</span><span class="s">"mr"</span><span class="o">)</span> 
-    <span class="o">.</span><span class="py">setInputCols</span><span class="o">(</span><span class="nc">Array</span><span class="o">(</span><span class="s">"document"</span><span class="o">,</span> <span class="s">"token"</span><span class="o">))</span> 
-    <span class="o">.</span><span class="py">setOutputCol</span><span class="o">(</span><span class="s">"embeddings"</span><span class="o">)</span>
+<span class="o">.</span><span class="py">setInputCols</span><span class="o">(</span><span class="nc">Array</span><span class="o">(</span><span class="s">"document"</span><span class="o">,</span> <span class="s">"token"</span><span class="o">))</span> 
+<span class="o">.</span><span class="py">setOutputCol</span><span class="o">(</span><span class="s">"embeddings"</span><span class="o">)</span>
 
 <span class="k">val</span> <span class="nv">pipeline</span> <span class="k">=</span> <span class="k">new</span> <span class="nc">Pipeline</span><span class="o">().</span><span class="py">setStages</span><span class="o">(</span><span class="nc">Array</span><span class="o">(</span><span class="n">documentAssembler</span><span class="o">,</span> <span class="n">tokenizer</span><span class="o">,</span> <span class="n">embeddings</span><span class="o">))</span>
 
@@ -464,6 +464,11 @@
 
 <span class="k">val</span> <span class="nv">result</span> <span class="k">=</span> <span class="nv">pipeline</span><span class="o">.</span><span class="py">fit</span><span class="o">(</span><span class="n">data</span><span class="o">).</span><span class="py">transform</span><span class="o">(</span><span class="n">data</span><span class="o">)</span>
 </code></pre></div>  </div>
+
+  <div class="language-python nlu-block highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">nlu</span>
+<span class="n">nlu</span><span class="p">.</span><span class="n">load</span><span class="p">(</span><span class="s">"mr.embed.albert"</span><span class="p">).</span><span class="n">predict</span><span class="p">(</span><span class="s">"""मला स्पार्क एनएलपी आवडते"""</span><span class="p">)</span>
+</code></pre></div>  </div>
+
 </div>
 
 <h2 class="model-param" id="model-information">Model Information</h2>
@@ -641,7 +646,7 @@ hr.code-selector-underlie {
 
 }
 
-</style><div class="article__section-navigator clearfix"><div class="previous nav_link"><span>PREVIOUS</span><a href="/2022/04/14/albert_embeddings_fralbert_base_fr_3_0.html">French ALBERT Embeddings (from qwant)</a></div><div class="next nav_link"><span>NEXT</span><a href="/2022/04/14/albert_embeddings_marathi_albert_v2_mr_3_0.html">Marathi ALBERT Embeddings (from l3cube-pune)</a></div></div></div>
+</style><div class="article__section-navigator clearfix"><div class="previous nav_link"><span>PREVIOUS</span><a href="/2022/04/14/albert_embeddings_fralbert_base_fr_3_0.html">French ALBERT Embeddings (from qwant)</a></div><div class="next nav_link"><span>NEXT</span><a href="/2022/04/14/albert_embeddings_marathi_albert_v2_mr_3_0.html">Marathi ALBERT Embeddings (v2)</a></div></div></div>
 
 </div>
 </div>
@@ -1092,30 +1097,6 @@ jQuery(document).ready(function(){
 /*(function () {
 
 })();*/
-</script><script>
-  window.Lazyload.js(['https://cdn.bootcss.com/jquery/3.1.1/jquery.min.js', 'https://cdn.bootcss.com/Chart.js/2.7.2/Chart.bundle.min.js'], function() {
-    var $canvas = null, $this = null, _ctx = null, _text = '';
-    $('.language-chart').each(function(){
-      $this = $(this);
-      $canvas = $('<canvas></canvas>');
-      _text = $this.text();
-      $this.text('').append($canvas);
-      _ctx = $canvas.get(0).getContext('2d');
-      (_ctx && _text) && (new Chart(_ctx, JSON.parse(_text)) && $this.attr('data-processed', true));
-    });
-  });
-</script><script type="text/x-mathjax-config">
-	var _config = { tex2jax: {
-		inlineMath: [['$','$'], ['\\(','\\)']]
-	}};_config.TeX = { equationNumbers: { autoNumber: "all" } };MathJax.Hub.Config(_config);
-</script>
-<script type="text/javascript" src="https://cdn.bootcss.com/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML" async></script><script>
-  window.Lazyload.js('https://cdn.bootcss.com/mermaid/8.0.0-rc.8/mermaid.min.js', function() {
-    mermaid.initialize({
-      startOnLoad: true
-    });
-    mermaid.init(undefined, '.language-mermaid');
-  });
 </script>
     </div>
     <script>(function () {

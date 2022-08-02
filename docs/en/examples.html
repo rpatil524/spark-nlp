@@ -420,7 +420,7 @@
 <span class="c"># should be Java 8 (Oracle or OpenJDK)</span>
 <span class="nv">$ </span>conda create <span class="nt">-n</span> sparknlp <span class="nv">python</span><span class="o">=</span>3.7 <span class="nt">-y</span>
 <span class="nv">$ </span>conda activate sparknlp
-<span class="nv">$ </span>pip <span class="nb">install </span>spark-nlp<span class="o">==</span>4.0.0 <span class="nv">pyspark</span><span class="o">==</span>3.2.1
+<span class="nv">$ </span>pip <span class="nb">install </span>spark-nlp<span class="o">==</span>4.0.2 <span class="nv">pyspark</span><span class="o">==</span>3.2.1
 </code></pre></div></div>
 
 <h2 id="google-colab-notebook">Google Colab Notebook</h2>
@@ -438,7 +438,7 @@
 <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># -p is for pyspark</span>
 <span class="c"># -s is for spark-nlp</span>
 <span class="c"># by default they are set to the latest</span>
-<span class="o">!</span>bash colab.sh <span class="nt">-p</span> 3.2.1 <span class="nt">-s</span> 4.0.0
+<span class="o">!</span>bash colab.sh <span class="nt">-p</span> 3.2.1 <span class="nt">-s</span> 4.0.2
 </code></pre></div></div>
 
 <p><a href="https://colab.research.google.com/github/JohnSnowLabs/spark-nlp-workshop/blob/master/jupyter/quick_start_google_colab.ipynb">Spark NLP quick start on Google Colab</a> is a live demo on Google Colab that performs named entity recognitions and sentiment analysis by using Spark NLP pretrained pipelines.</p>
@@ -1108,30 +1108,6 @@ jQuery(document).ready(function(){
     window.pageAsideAffix = affix;
   });
 })();
-</script><script>
-  window.Lazyload.js(['https://cdn.bootcss.com/jquery/3.1.1/jquery.min.js', 'https://cdn.bootcss.com/Chart.js/2.7.2/Chart.bundle.min.js'], function() {
-    var $canvas = null, $this = null, _ctx = null, _text = '';
-    $('.language-chart').each(function(){
-      $this = $(this);
-      $canvas = $('<canvas></canvas>');
-      _text = $this.text();
-      $this.text('').append($canvas);
-      _ctx = $canvas.get(0).getContext('2d');
-      (_ctx && _text) && (new Chart(_ctx, JSON.parse(_text)) && $this.attr('data-processed', true));
-    });
-  });
-</script><script type="text/x-mathjax-config">
-	var _config = { tex2jax: {
-		inlineMath: [['$','$'], ['\\(','\\)']]
-	}};_config.TeX = { equationNumbers: { autoNumber: "all" } };MathJax.Hub.Config(_config);
-</script>
-<script type="text/javascript" src="https://cdn.bootcss.com/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML" async></script><script>
-  window.Lazyload.js('https://cdn.bootcss.com/mermaid/8.0.0-rc.8/mermaid.min.js', function() {
-    mermaid.initialize({
-      startOnLoad: true
-    });
-    mermaid.init(undefined, '.language-mermaid');
-  });
 </script>
     </div>
     <script>(function () {

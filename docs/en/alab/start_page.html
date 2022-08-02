@@ -543,6 +543,15 @@
 
 <p><img class="image image--xl" src="/assets/images/annotation_lab/1.6.0/project_group.png" style="width:100%; align:center; box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);" /></p>
 
+<h2 id="project-cloning-and-backup">Project Cloning and Backup</h2>
+<p>In previous versions, it was possible to Import/Export Tasks only from a Project. Apart from the Tasks other components like Project Configuration, Tags, etc. could not be easily exported/imported. Since release 3.2.0, it is possible to perform the import/export of an entire Project. All project-related items (tasks, project configuration, project members, task assignments) can be imported/exported.</p>
+
+<p><img class="image image--xl" src="/assets/images/annotation_lab/anno_backup_clone.gif" style="width:100%; align:center; box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);" /></p>
+
+<p>In addition, users can clone an existing project as well.</p>
+
+<p><img class="image image--xl" src="/assets/images/annotation_lab/anno_clone.png" style="width:100%; align:center; box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);" /></p>
+
 </div><div class="d-print-none"><footer class="article__footer"><span class="footer_date">Last updated
       <time itemprop="dateModified" datetime="2020-11-18T00:00:00+00:00">Nov 18, 2020</time>
     </span><!-- start custom article footer snippet -->
@@ -1223,30 +1232,6 @@ jQuery(document).ready(function(){
     window.pageAsideAffix = affix;
   });
 })();
-</script><script>
-  window.Lazyload.js(['https://cdn.bootcss.com/jquery/3.1.1/jquery.min.js', 'https://cdn.bootcss.com/Chart.js/2.7.2/Chart.bundle.min.js'], function() {
-    var $canvas = null, $this = null, _ctx = null, _text = '';
-    $('.language-chart').each(function(){
-      $this = $(this);
-      $canvas = $('<canvas></canvas>');
-      _text = $this.text();
-      $this.text('').append($canvas);
-      _ctx = $canvas.get(0).getContext('2d');
-      (_ctx && _text) && (new Chart(_ctx, JSON.parse(_text)) && $this.attr('data-processed', true));
-    });
-  });
-</script><script type="text/x-mathjax-config">
-	var _config = { tex2jax: {
-		inlineMath: [['$','$'], ['\\(','\\)']]
-	}};_config.TeX = { equationNumbers: { autoNumber: "all" } };MathJax.Hub.Config(_config);
-</script>
-<script type="text/javascript" src="https://cdn.bootcss.com/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML" async></script><script>
-  window.Lazyload.js('https://cdn.bootcss.com/mermaid/8.0.0-rc.8/mermaid.min.js', function() {
-    mermaid.initialize({
-      startOnLoad: true
-    });
-    mermaid.init(undefined, '.language-mermaid');
-  });
 </script>
     </div>
     <script>(function () {

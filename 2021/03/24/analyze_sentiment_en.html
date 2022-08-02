@@ -9,7 +9,7 @@
     j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-59JLR64');</script>
-<!-- End Google Tag Manager --><title>Sentiment Analysis pipeline for English- Spark NLP Model</title><meta name="description" content="DescriptionThe analyze_sentiment is a pretrained pipeline that we can use to process text with a simple pipeline that performs basic processing steps        ...">
+<!-- End Google Tag Manager --><title>Sentiment Analysis pipeline for English- Spark NLP Model</title><meta name="description" content="DescriptionThe analyze_sentiment is a pretrained pipeline that we can use to process text with a simple pipeline that performs basic processing steps and rec...">
 <link rel="canonical" href="/2021/03/24/analyze_sentiment_en.html"><link rel="alternate" type="application/rss+xml" title="Spark NLP" href="/feed.xml"><!-- start favicons snippet, use https://realfavicongenerator.net/ -->
 <!---->
 <!-- <link rel="apple-touch-icon" sizes="180x180" href="/fav.ico"> -->
@@ -417,11 +417,11 @@
 <!-- end custom article top snippet --><div class="article__content" itemprop="articleBody"><h2 id="description">Description</h2>
 
 <p>The analyze_sentiment is a pretrained pipeline that we can use to process text with a simple pipeline that performs basic processing steps 
-        and recognizes entities .
-         It performs most of the common text processing tasks on your dataframe</p>
+and recognizes entities .
+It performs most of the common text processing tasks on your dataframe</p>
 
-<p class="btn-box"><a href="https://demo.johnsnowlabs.com/public/NER_EN_18/" class="button button-orange">Live Demo</a>
-<a href="https://colab.research.google.com/github/JohnSnowLabs/spark-nlp-workshop/blob/master/tutorials/streamlit_notebooks/NER_EN.ipynb" class="button button-orange button-orange-trans co button-icon">Open in Colab</a>
+<p class="btn-box"><a href="https://demo.johnsnowlabs.com/public/SENTIMENT_EN/" class="button button-orange">Live Demo</a>
+<a href="https://colab.research.google.com/github/JohnSnowLabs/spark-nlp-workshop/blob/master/tutorials/streamlit_notebooks/SENTIMENT_EN.ipynb" class="button button-orange button-orange-trans co button-icon">Open in Colab</a>
 <a href="https://s3.amazonaws.com/auxdata.johnsnowlabs.com/public/models/analyze_sentiment_en_3.0.0_3.0_1616544471011.zip" class="button button-orange button-orange-trans arr button-icon">Download</a></p>
 
 <h2 id="how-to-use">How to use</h2>
@@ -430,34 +430,39 @@
   <div class="top_tab_li">   
     <button class="tab-li code-selector-active python-button">Python</button><button class="tab-li code-selector-un-active scala-button">Scala</button><button class="tab-li code-selector-un-active nlu-button">NLU</button>
 </div>
+
   <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
-<span class="kn">from</span> <span class="nn">sparknlp.pretrained</span> <span class="kn">import</span> <span class="n">PretrainedPipelinein</span>
+<span class="kn">from</span> <span class="nn">sparknlp.pretrained</span> <span class="kn">import</span> <span class="n">PretrainedPipeline</span>
+
 <span class="n">pipeline</span> <span class="o">=</span> <span class="n">PretrainedPipeline</span><span class="p">(</span><span class="s">'analyze_sentiment'</span><span class="p">,</span> <span class="n">lang</span> <span class="o">=</span> <span class="s">'en'</span><span class="p">)</span>
-<span class="n">annotations</span> <span class="o">=</span>  <span class="n">pipeline</span><span class="p">.</span><span class="n">fullAnnotate</span><span class="p">(</span><span class="s">""</span><span class="n">Hello</span> <span class="k">from</span> <span class="n">John</span> <span class="n">Snow</span> <span class="n">Labs</span> <span class="err">!</span> <span class="s">""</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
-<span class="n">annotations</span><span class="p">.</span><span class="n">keys</span><span class="p">()</span>
+
+<span class="n">result</span> <span class="o">=</span> <span class="n">pipeline</span><span class="p">.</span><span class="n">fullAnnotate</span><span class="p">(</span><span class="s">"""Demonicus is a movie turned into a video game! I just love the story and the things that goes on in the film.It is a B-film ofcourse but that doesn`t bother one bit because its made just right and the music was rad! Horror and sword fight freaks,buy this movie now!"""</span><span class="p">)</span>
+
 
 </code></pre></div>  </div>
   <div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
-<span class="k">val</span> <span class="nv">pipeline</span> <span class="k">=</span> <span class="k">new</span> <span class="nc">PretrainedPipeline</span><span class="o">(</span><span class="s">"analyze_sentiment"</span><span class="o">,</span> <span class="n">lang</span> <span class="k">=</span> <span class="s">"en"</span><span class="o">)</span>
-<span class="k">val</span> <span class="nv">result</span> <span class="k">=</span> <span class="nv">pipeline</span><span class="o">.</span><span class="py">fullAnnotate</span><span class="o">(</span><span class="s">"Hello from John Snow Labs ! "</span><span class="o">)(</span><span class="mi">0</span><span class="o">)</span>
+<span class="k">import</span> <span class="nn">com.johnsnowlabs.nlp.pretrained.PretrainedPipeline</span>
 
+<span class="k">val</span> <span class="nv">pipeline</span> <span class="k">=</span> <span class="k">new</span> <span class="nc">PretrainedPipeline</span><span class="o">(</span><span class="s">"analyze_sentiment"</span><span class="o">,</span> <span class="n">lang</span> <span class="k">=</span> <span class="s">"en"</span><span class="o">)</span>
+
+<span class="k">val</span> <span class="nv">result</span> <span class="k">=</span> <span class="nv">pipeline</span><span class="o">.</span><span class="py">fullAnnotate</span><span class="o">(</span><span class="s">"""Demonicus is a movie turned into a video game! I just love the story and the things that goes on in the film.It is a B-film ofcourse but that doesn`t bother one bit because its made just right and the music was rad! Horror and sword fight freaks,buy this movie now!"""</span><span class="o">)</span>
 
 </code></pre></div>  </div>
 
   <div class="language-python nlu-block highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
 <span class="kn">import</span> <span class="nn">nlu</span>
-<span class="n">text</span> <span class="o">=</span> <span class="p">[</span><span class="s">""</span><span class="n">Hello</span> <span class="k">from</span> <span class="n">John</span> <span class="n">Snow</span> <span class="n">Labs</span> <span class="err">!</span> <span class="s">""</span><span class="p">]</span>
+<span class="n">text</span> <span class="o">=</span> <span class="p">[</span><span class="s">"""Demonicus is a movie turned into a video game! I just love the story and the things that goes on in the film.It is a B-film ofcourse but that doesn`t bother one bit because its made just right and the music was rad! Horror and sword fight freaks,buy this movie now!"""</span><span class="p">]</span>
 <span class="n">result_df</span> <span class="o">=</span> <span class="n">nlu</span><span class="p">.</span><span class="n">load</span><span class="p">(</span><span class="s">'en.classify'</span><span class="p">).</span><span class="n">predict</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
 <span class="n">result_df</span>
-    
+
 </code></pre></div>  </div>
 </div>
 
 <h2 id="results">Results</h2>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>|    | document                         | sentence                        | token                                          | checked                                        | sentiment    |
-|---:|:---------------------------------|:--------------------------------|:-----------------------------------------------|:-----------------------------------------------|:-------------|
-|  0 | <span class="o">[</span><span class="s1">'Hello from John Snow Labs ! '</span><span class="o">]</span> | <span class="o">[</span><span class="s1">'Hello from John Snow Labs !'</span><span class="o">]</span> | <span class="o">[</span><span class="s1">'Hello'</span>, <span class="s1">'from'</span>, <span class="s1">'John'</span>, <span class="s1">'Snow'</span>, <span class="s1">'Labs'</span>, <span class="s1">'!'</span><span class="o">]</span> | <span class="o">[</span><span class="s1">'Hello'</span>, <span class="s1">'from'</span>, <span class="s1">'John'</span>, <span class="s1">'Snow'</span>, <span class="s1">'Labs'</span>, <span class="s1">'!'</span><span class="o">]</span> | <span class="o">[</span><span class="s1">'negative'</span><span class="o">]</span> |
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>|    | text                                                                                                                                                                                                                                                                      | sentiment   |
+|---:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:------------|
+|  0 | Demonicus is a movie turned into a video game! I just love the story and the things that goes on <span class="k">in </span>the film.It is a B-film ofcourse but that doesn<span class="sb">`</span>t bother one bit because its made just right and the music was rad! Horror and sword fight freaks,buy this movie now! | positive    |
 </code></pre></div></div>
 
 <h2 class="model-param" id="model-information">Model Information</h2>
@@ -1066,30 +1071,6 @@ jQuery(document).ready(function(){
 /*(function () {
 
 })();*/
-</script><script>
-  window.Lazyload.js(['https://cdn.bootcss.com/jquery/3.1.1/jquery.min.js', 'https://cdn.bootcss.com/Chart.js/2.7.2/Chart.bundle.min.js'], function() {
-    var $canvas = null, $this = null, _ctx = null, _text = '';
-    $('.language-chart').each(function(){
-      $this = $(this);
-      $canvas = $('<canvas></canvas>');
-      _text = $this.text();
-      $this.text('').append($canvas);
-      _ctx = $canvas.get(0).getContext('2d');
-      (_ctx && _text) && (new Chart(_ctx, JSON.parse(_text)) && $this.attr('data-processed', true));
-    });
-  });
-</script><script type="text/x-mathjax-config">
-	var _config = { tex2jax: {
-		inlineMath: [['$','$'], ['\\(','\\)']]
-	}};_config.TeX = { equationNumbers: { autoNumber: "all" } };MathJax.Hub.Config(_config);
-</script>
-<script type="text/javascript" src="https://cdn.bootcss.com/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML" async></script><script>
-  window.Lazyload.js('https://cdn.bootcss.com/mermaid/8.0.0-rc.8/mermaid.min.js', function() {
-    mermaid.initialize({
-      startOnLoad: true
-    });
-    mermaid.init(undefined, '.language-mermaid');
-  });
 </script>
     </div>
     <script>(function () {

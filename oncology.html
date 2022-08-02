@@ -476,24 +476,55 @@
       <li      >
         <a href="/classify_medical_texts">Classify Medical Texts</a>
       </li>
-      <li><strong>Spark NLP for Finance and Legal</strong></li>
+      <li><strong>Spark NLP for Finance</strong></li>
       <li      >
-        <a href="/entity_recognition">Entity Recognition</a>
-      </li>
-      <li      >
-        <a href="/sentiment_analysis">Sentiment Analysis</a>
-      </li>
-      <li data-hide="hide"      >
-        <a href="/deidentification_legal">De-identification</a>
-      </li>
-      <li data-hide="hide"      >
-        <a href="/relation_extraction">Relation Extraction</a>
-      </li>
-      <li data-hide="hide"      >
-        <a href="/table_extraction">Table Extraction</a>
+        <a href="/financial_entity_recognition">Recognize Entities</a>
       </li>
       <li      >
-        <a href="/text_classification">Text Classification</a>
+        <a href="/financial_assertion_status">Understand Entity Context</a>
+      </li>
+      <li data-hide="hide"      >
+        <a href="/financial_relation_extraction">Extract Relationships</a>
+      </li>
+      <li      >
+        <a href="/financial_company_normalization">Normalize Company Names</a>
+      </li>
+      <li      >
+        <a href="/financial_text_classification">Classify Texts</a>
+      </li>
+      <li      >
+        <a href="/financial_sentiment_analysis">Analyze Sentiment</a>
+      </li>
+      <li data-hide="hide"      >
+        <a href="/financial_deidentification">De-identify Texts</a>
+      </li>
+      <li data-hide="hide"      >
+        <a href="/financial_table_understanding">Understand Tables</a>
+      </li>
+      <li><strong>Spark NLP for Legal</strong></li>
+      <li      >
+        <a href="/legal_entity_recognition">Recognize Entities</a>
+      </li>
+      <li data-hide="hide"      >
+        <a href="/legal_assertion_status">Understand Entity Context</a>
+      </li>
+      <li      >
+        <a href="/legal_relation_extraction">Extract Relationships</a>
+      </li>
+      <li      >
+        <a href="/legal_company_normalization">Normalize Company Names</a>
+      </li>
+      <li      >
+        <a href="/legal_text_classification">Classify Texts</a>
+      </li>
+      <li data-hide="hide"      >
+        <a href="/legal_sentiment_analysis">Analyze sentiment</a>
+      </li>
+      <li data-hide="hide"      >
+        <a href="/legal_deidentification">De-identify texts</a>
+      </li>
+      <li data-hide="hide"      >
+        <a href="/legal_table_understanding">Understand tables</a>
       </li>
       <li><strong>Spark OCR</strong></li>
       <li      >
@@ -535,14 +566,14 @@
                   </figure><div class="tab-item-title">Detect oncological & biological concepts</div><div class="tab-description">Automatically identify <b>oncological</b> and <b>biological</b> entities such as <b>Amino_acids, Anatomical systems, Cancer, Cells or Cellular components</b> using our pertained Spark NLP model.</div><ul class="tab-menu"><li><a id="detect_tumor_characteristics" class="button button--normal button--pill button--lg"
                       href="https://demo.johnsnowlabs.com/healthcare/NER_TUMOR">Live Demo</a></li><li><a id="detect_tumor_characteristics" class="button button--blue_btn button--pill button--lg"
                       href="https://colab.research.google.com/github/JohnSnowLabs/spark-nlp-workshop/blob/master/tutorials/streamlit_notebooks/healthcare/NER_TUMOR.ipynb">Colab Netbook</a></li></ul></div> 
-            </div><div class="tab-item dn">
+            </div><div class="tab-item ">
               <div class="tab-item-inner"><figure class="tab_fig_blue">
-                    <img src="/assets/images/Detect_diagnosis_and_procedures.svg" />
+                    <img src="/assets/images/Resolve_Oncology_terminology.svg" />
                   </figure>
                   <figure class="tab_fig_white">
-                    <img src="/assets/images/Detect_diagnosis_and_procedures_f.svg" />
-                  </figure><div class="tab-item-title">Map oncology terminology to ICD-O taxonomy</div><div class="tab-description">Automatically detect the tumor in your healthcare records and link it to the corresponding ICDO code using Spark NLP for Healthcare out of the box.</div><ul class="tab-menu"><li><a id="icdo_coding" class="button button--normal button--pill button--lg"
-                      href="https://demo.johnsnowlabs.com/healthcare/ER_ICDO">Live Demo</a></li><li><a id="icdo_coding" class="button button--blue_btn button--pill button--lg"
+                    <img src="/assets/images/Resolve_Oncology_terminology_f.svg" />
+                  </figure><div class="tab-item-title">Resolve Oncology terminology using the ICD-O taxonomy</div><div class="tab-description">This model maps oncology terminology to ICD-O codes using Entity Resolvers.</div><ul class="tab-menu"><li><a id="resolve_oncology_terminology_using_icdo_taxonomy" class="button button--normal button--pill button--lg"
+                      href="https://demo.johnsnowlabs.com/healthcare/ER_ICDO/">Live Demo</a></li><li><a id="resolve_oncology_terminology_using_icdo_taxonomy" class="button button--blue_btn button--pill button--lg"
                       href="https://colab.research.google.com/github/JohnSnowLabs/spark-nlp-workshop/blob/master/tutorials/streamlit_notebooks/healthcare/ER_ICDO.ipynb">Colab Netbook</a></li></ul></div> 
             </div><div class="tab-item ">
               <div class="tab-item-inner"><figure class="tab_fig_blue">
@@ -953,30 +984,6 @@ jQuery(document).ready(function(){
 /*(function () {
 
 })();*/
-</script><script>
-  window.Lazyload.js(['https://cdn.bootcss.com/jquery/3.1.1/jquery.min.js', 'https://cdn.bootcss.com/Chart.js/2.7.2/Chart.bundle.min.js'], function() {
-    var $canvas = null, $this = null, _ctx = null, _text = '';
-    $('.language-chart').each(function(){
-      $this = $(this);
-      $canvas = $('<canvas></canvas>');
-      _text = $this.text();
-      $this.text('').append($canvas);
-      _ctx = $canvas.get(0).getContext('2d');
-      (_ctx && _text) && (new Chart(_ctx, JSON.parse(_text)) && $this.attr('data-processed', true));
-    });
-  });
-</script><script type="text/x-mathjax-config">
-	var _config = { tex2jax: {
-		inlineMath: [['$','$'], ['\\(','\\)']]
-	}};_config.TeX = { equationNumbers: { autoNumber: "all" } };MathJax.Hub.Config(_config);
-</script>
-<script type="text/javascript" src="https://cdn.bootcss.com/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML" async></script><script>
-  window.Lazyload.js('https://cdn.bootcss.com/mermaid/8.0.0-rc.8/mermaid.min.js', function() {
-    mermaid.initialize({
-      startOnLoad: true
-    });
-    mermaid.init(undefined, '.language-mermaid');
-  });
 </script>
     </div>
     <script>(function () {

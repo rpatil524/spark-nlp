@@ -431,47 +431,52 @@
     <button class="tab-li code-selector-active python-button">Python</button><button class="tab-li code-selector-un-active scala-button">Scala</button><button class="tab-li code-selector-un-active nlu-button">NLU</button>
 </div>
   <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">document</span> <span class="o">=</span> <span class="n">DocumentAssembler</span><span class="p">()</span>\
-  <span class="p">.</span><span class="n">setInputCol</span><span class="p">(</span><span class="s">"text"</span><span class="p">)</span>\
-  <span class="p">.</span><span class="n">setOutputCol</span><span class="p">(</span><span class="s">"document"</span><span class="p">)</span>
+<span class="p">.</span><span class="n">setInputCol</span><span class="p">(</span><span class="s">"text"</span><span class="p">)</span>\
+<span class="p">.</span><span class="n">setOutputCol</span><span class="p">(</span><span class="s">"document"</span><span class="p">)</span>
 
 <span class="n">token</span> <span class="o">=</span> <span class="n">Tokenizer</span><span class="p">()</span>\
-  <span class="p">.</span><span class="n">setInputCols</span><span class="p">(</span><span class="s">"document"</span><span class="p">)</span>\
-  <span class="p">.</span><span class="n">setOutputCol</span><span class="p">(</span><span class="s">"token"</span><span class="p">)</span>
+<span class="p">.</span><span class="n">setInputCols</span><span class="p">(</span><span class="s">"document"</span><span class="p">)</span>\
+<span class="p">.</span><span class="n">setOutputCol</span><span class="p">(</span><span class="s">"token"</span><span class="p">)</span>
 
 <span class="n">norm</span> <span class="o">=</span> <span class="n">Normalizer</span><span class="p">()</span>\
-  <span class="p">.</span><span class="n">setInputCols</span><span class="p">([</span><span class="s">"token"</span><span class="p">])</span>\
-  <span class="p">.</span><span class="n">setOutputCol</span><span class="p">(</span><span class="s">"normalized"</span><span class="p">)</span>\
-  <span class="p">.</span><span class="n">setLowercase</span><span class="p">(</span><span class="bp">True</span><span class="p">)</span>
+<span class="p">.</span><span class="n">setInputCols</span><span class="p">([</span><span class="s">"token"</span><span class="p">])</span>\
+<span class="p">.</span><span class="n">setOutputCol</span><span class="p">(</span><span class="s">"normalized"</span><span class="p">)</span>\
+<span class="p">.</span><span class="n">setLowercase</span><span class="p">(</span><span class="bp">True</span><span class="p">)</span>
 
 <span class="n">stops</span> <span class="o">=</span> <span class="n">StopWordsCleaner</span><span class="p">.</span><span class="n">pretrained</span><span class="p">()</span>\
-  <span class="p">.</span><span class="n">setInputCols</span><span class="p">(</span><span class="s">"normalized"</span><span class="p">)</span>\
-  <span class="p">.</span><span class="n">setOutputCol</span><span class="p">(</span><span class="s">"cleanedToken"</span><span class="p">)</span>
-  
+<span class="p">.</span><span class="n">setInputCols</span><span class="p">(</span><span class="s">"normalized"</span><span class="p">)</span>\
+<span class="p">.</span><span class="n">setOutputCol</span><span class="p">(</span><span class="s">"cleanedToken"</span><span class="p">)</span>
+
 <span class="n">doc2Vec</span> <span class="o">=</span> <span class="n">Doc2VecModel</span><span class="p">.</span><span class="n">pretrained</span><span class="p">(</span><span class="s">"doc2vec_gigaword_wiki_300"</span><span class="p">,</span> <span class="s">"en"</span><span class="p">)</span>\
-  <span class="p">.</span><span class="n">setInputCols</span><span class="p">(</span><span class="s">"cleanedToken"</span><span class="p">)</span>\
-  <span class="p">.</span><span class="n">setOutputCol</span><span class="p">(</span><span class="s">"sentence_embeddings"</span><span class="p">)</span>
+<span class="p">.</span><span class="n">setInputCols</span><span class="p">(</span><span class="s">"cleanedToken"</span><span class="p">)</span>\
+<span class="p">.</span><span class="n">setOutputCol</span><span class="p">(</span><span class="s">"sentence_embeddings"</span><span class="p">)</span>
 </code></pre></div>  </div>
   <div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">val</span> <span class="nv">document</span> <span class="k">=</span> <span class="k">new</span> <span class="nc">DocumentAssembler</span><span class="o">()</span>
-      <span class="o">.</span><span class="py">setInputCol</span><span class="o">(</span><span class="s">"text"</span><span class="o">)</span>
-      <span class="o">.</span><span class="py">setOutputCol</span><span class="o">(</span><span class="s">"document"</span><span class="o">)</span>
+<span class="o">.</span><span class="py">setInputCol</span><span class="o">(</span><span class="s">"text"</span><span class="o">)</span>
+<span class="o">.</span><span class="py">setOutputCol</span><span class="o">(</span><span class="s">"document"</span><span class="o">)</span>
 
 <span class="k">val</span> <span class="nv">tokenizer</span> <span class="k">=</span> <span class="k">new</span> <span class="nc">Tokenizer</span><span class="o">()</span>
-      <span class="o">.</span><span class="py">setInputCols</span><span class="o">(</span><span class="nc">Array</span><span class="o">(</span><span class="s">"document"</span><span class="o">))</span>
-      <span class="o">.</span><span class="py">setOutputCol</span><span class="o">(</span><span class="s">"token"</span><span class="o">)</span>
+<span class="o">.</span><span class="py">setInputCols</span><span class="o">(</span><span class="nc">Array</span><span class="o">(</span><span class="s">"document"</span><span class="o">))</span>
+<span class="o">.</span><span class="py">setOutputCol</span><span class="o">(</span><span class="s">"token"</span><span class="o">)</span>
 
 <span class="k">val</span> <span class="nv">norm</span> <span class="k">=</span> <span class="k">new</span> <span class="nc">Normalizer</span><span class="o">()</span>
-      <span class="o">.</span><span class="py">setInputCols</span><span class="o">(</span><span class="nc">Array</span><span class="o">(</span><span class="s">"token"</span><span class="o">))</span>
-      <span class="o">.</span><span class="py">setOutputCol</span><span class="o">(</span><span class="s">"normalized"</span><span class="o">)</span>
-      <span class="o">.</span><span class="py">setLowercase</span><span class="o">(</span><span class="kc">true</span><span class="o">)</span>
+<span class="o">.</span><span class="py">setInputCols</span><span class="o">(</span><span class="nc">Array</span><span class="o">(</span><span class="s">"token"</span><span class="o">))</span>
+<span class="o">.</span><span class="py">setOutputCol</span><span class="o">(</span><span class="s">"normalized"</span><span class="o">)</span>
+<span class="o">.</span><span class="py">setLowercase</span><span class="o">(</span><span class="kc">true</span><span class="o">)</span>
 
 <span class="k">val</span> <span class="nv">stops</span> <span class="k">=</span> <span class="nv">StopWordsCleaner</span><span class="o">.</span><span class="py">pretrained</span><span class="o">()</span>
-      <span class="o">.</span><span class="py">setInputCols</span><span class="o">(</span><span class="s">"normalized"</span><span class="o">)</span>
-      <span class="o">.</span><span class="py">setOutputCol</span><span class="o">(</span><span class="s">"cleanedToken"</span><span class="o">)</span>
+<span class="o">.</span><span class="py">setInputCols</span><span class="o">(</span><span class="s">"normalized"</span><span class="o">)</span>
+<span class="o">.</span><span class="py">setOutputCol</span><span class="o">(</span><span class="s">"cleanedToken"</span><span class="o">)</span>
 
 <span class="k">val</span> <span class="nv">doc2Vec</span> <span class="k">=</span> <span class="nv">Doc2VecModel</span><span class="o">.</span><span class="py">pretrained</span><span class="o">(</span><span class="s">"doc2vec_gigaword_wiki_300"</span><span class="o">,</span> <span class="s">"en"</span><span class="o">)</span>
-  <span class="o">.</span><span class="py">setInputCols</span><span class="o">(</span><span class="s">"cleanedToken"</span><span class="o">)\</span>
-  <span class="o">.</span><span class="py">setOutputCol</span><span class="o">(</span><span class="s">"sentence_embeddings"</span><span class="o">)</span>
+<span class="o">.</span><span class="py">setInputCols</span><span class="o">(</span><span class="s">"cleanedToken"</span><span class="o">)\</span>
+<span class="o">.</span><span class="py">setOutputCol</span><span class="o">(</span><span class="s">"sentence_embeddings"</span><span class="o">)</span>
 </code></pre></div>  </div>
+
+  <div class="language-python nlu-block highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">nlu</span>
+<span class="n">nlu</span><span class="p">.</span><span class="n">load</span><span class="p">(</span><span class="s">"en.embed_sentence.doc2vec.gigaword_wiki_300"</span><span class="p">).</span><span class="n">predict</span><span class="p">(</span><span class="s">"""Put your text here."""</span><span class="p">)</span>
+</code></pre></div>  </div>
+
 </div>
 
 <h2 class="model-param" id="model-information">Model Information</h2>
@@ -1089,30 +1094,6 @@ jQuery(document).ready(function(){
 /*(function () {
 
 })();*/
-</script><script>
-  window.Lazyload.js(['https://cdn.bootcss.com/jquery/3.1.1/jquery.min.js', 'https://cdn.bootcss.com/Chart.js/2.7.2/Chart.bundle.min.js'], function() {
-    var $canvas = null, $this = null, _ctx = null, _text = '';
-    $('.language-chart').each(function(){
-      $this = $(this);
-      $canvas = $('<canvas></canvas>');
-      _text = $this.text();
-      $this.text('').append($canvas);
-      _ctx = $canvas.get(0).getContext('2d');
-      (_ctx && _text) && (new Chart(_ctx, JSON.parse(_text)) && $this.attr('data-processed', true));
-    });
-  });
-</script><script type="text/x-mathjax-config">
-	var _config = { tex2jax: {
-		inlineMath: [['$','$'], ['\\(','\\)']]
-	}};_config.TeX = { equationNumbers: { autoNumber: "all" } };MathJax.Hub.Config(_config);
-</script>
-<script type="text/javascript" src="https://cdn.bootcss.com/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML" async></script><script>
-  window.Lazyload.js('https://cdn.bootcss.com/mermaid/8.0.0-rc.8/mermaid.min.js', function() {
-    mermaid.initialize({
-      startOnLoad: true
-    });
-    mermaid.init(undefined, '.language-mermaid');
-  });
 </script>
     </div>
     <script>(function () {

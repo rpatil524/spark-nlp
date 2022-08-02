@@ -457,23 +457,27 @@
 </div>
 
   <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">ner_tagger</span> <span class="o">=</span> <span class="n">sparknlp</span><span class="p">.</span><span class="n">annotators</span><span class="p">.</span><span class="n">NerDLModel</span><span class="p">()</span>\
-    <span class="p">.</span><span class="n">pretrained</span><span class="p">(</span><span class="s">'jsl_ner_wip_clinical'</span><span class="p">,</span><span class="s">"en"</span><span class="p">,</span><span class="s">"clinical/models"</span><span class="p">)</span>\
-    <span class="p">.</span><span class="n">setInputCols</span><span class="p">(</span><span class="s">"sentences"</span><span class="p">,</span> <span class="s">"tokens"</span><span class="p">,</span> <span class="s">"embeddings"</span><span class="p">)</span>\
-    <span class="p">.</span><span class="n">setOutputCol</span><span class="p">(</span><span class="s">"ner_tags"</span><span class="p">)</span> 
+<span class="p">.</span><span class="n">pretrained</span><span class="p">(</span><span class="s">'jsl_ner_wip_clinical'</span><span class="p">,</span><span class="s">"en"</span><span class="p">,</span><span class="s">"clinical/models"</span><span class="p">)</span>\
+<span class="p">.</span><span class="n">setInputCols</span><span class="p">(</span><span class="s">"sentences"</span><span class="p">,</span> <span class="s">"tokens"</span><span class="p">,</span> <span class="s">"embeddings"</span><span class="p">)</span>\
+<span class="p">.</span><span class="n">setOutputCol</span><span class="p">(</span><span class="s">"ner_tags"</span><span class="p">)</span> 
 
 <span class="n">re_model</span> <span class="o">=</span> <span class="n">RelationExtractionModel</span><span class="p">()</span>\
-    <span class="p">.</span><span class="n">pretrained</span><span class="p">(</span><span class="s">"re_test_result_date"</span><span class="p">,</span> <span class="s">"en"</span><span class="p">,</span> <span class="s">'clinical/models'</span><span class="p">)</span>\
-    <span class="p">.</span><span class="n">setInputCols</span><span class="p">([</span><span class="s">"embeddings"</span><span class="p">,</span> <span class="s">"pos_tags"</span><span class="p">,</span> <span class="s">"ner_chunks"</span><span class="p">,</span> <span class="s">"dependencies"</span><span class="p">])</span>\
-    <span class="p">.</span><span class="n">setOutputCol</span><span class="p">(</span><span class="s">"relations"</span><span class="p">)</span>\
-    <span class="p">.</span><span class="n">setMaxSyntacticDistance</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>\ <span class="c1">#default: 0
-</span>    <span class="p">.</span><span class="n">setPredictionThreshold</span><span class="p">(</span><span class="mf">0.9</span><span class="p">)</span>\ <span class="c1">#default: 0.5
-</span>    <span class="p">.</span><span class="n">setRelationPairs</span><span class="p">([</span><span class="s">"external_body_part_or_region-test"</span><span class="p">])</span> <span class="c1"># Possible relation pairs. Default: All Relations.
+<span class="p">.</span><span class="n">pretrained</span><span class="p">(</span><span class="s">"re_test_result_date"</span><span class="p">,</span> <span class="s">"en"</span><span class="p">,</span> <span class="s">'clinical/models'</span><span class="p">)</span>\
+<span class="p">.</span><span class="n">setInputCols</span><span class="p">([</span><span class="s">"embeddings"</span><span class="p">,</span> <span class="s">"pos_tags"</span><span class="p">,</span> <span class="s">"ner_chunks"</span><span class="p">,</span> <span class="s">"dependencies"</span><span class="p">])</span>\
+<span class="p">.</span><span class="n">setOutputCol</span><span class="p">(</span><span class="s">"relations"</span><span class="p">)</span>\
+<span class="p">.</span><span class="n">setMaxSyntacticDistance</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>\ <span class="c1">#default: 0
+</span><span class="p">.</span><span class="n">setPredictionThreshold</span><span class="p">(</span><span class="mf">0.9</span><span class="p">)</span>\ <span class="c1">#default: 0.5
+</span><span class="p">.</span><span class="n">setRelationPairs</span><span class="p">([</span><span class="s">"external_body_part_or_region-test"</span><span class="p">])</span> <span class="c1"># Possible relation pairs. Default: All Relations.
 </span>
 <span class="n">nlp_pipeline</span> <span class="o">=</span> <span class="n">Pipeline</span><span class="p">(</span><span class="n">stages</span><span class="o">=</span><span class="p">[</span> <span class="n">documenter</span><span class="p">,</span> <span class="n">sentencer</span><span class="p">,</span><span class="n">tokenizer</span><span class="p">,</span> <span class="n">words_embedder</span><span class="p">,</span> <span class="n">pos_tagger</span><span class="p">,</span>  <span class="n">clinical_ner_tagger</span><span class="p">,</span><span class="n">ner_chunker</span><span class="p">,</span> <span class="n">dependency_parser</span><span class="p">,</span><span class="n">re_model</span><span class="p">])</span>
 
 <span class="n">light_pipeline</span> <span class="o">=</span> <span class="n">LightPipeline</span><span class="p">(</span><span class="n">nlp_pipeline</span><span class="p">.</span><span class="n">fit</span><span class="p">(</span><span class="n">spark</span><span class="p">.</span><span class="n">createDataFrame</span><span class="p">([[</span><span class="s">''</span><span class="p">]]).</span><span class="n">toDF</span><span class="p">(</span><span class="s">"text"</span><span class="p">)))</span>
 
 <span class="n">annotations</span> <span class="o">=</span> <span class="n">light_pipeline</span><span class="p">.</span><span class="n">fullAnnotate</span><span class="p">(</span><span class="s">''''He was advised chest X-ray or CT scan after checking his SpO2 which was &lt;= 93%'''</span><span class="p">)</span>
+</code></pre></div>  </div>
+
+  <div class="language-python nlu-block highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">nlu</span>
+<span class="n">nlu</span><span class="p">.</span><span class="n">load</span><span class="p">(</span><span class="s">"en.relation.test_result_date"</span><span class="p">).</span><span class="n">predict</span><span class="p">(</span><span class="s">"""He was advised chest X-ray or CT scan after checking his SpO2 which was &lt;= 93%"""</span><span class="p">)</span>
 </code></pre></div>  </div>
 
 </div>
@@ -1117,30 +1121,6 @@ jQuery(document).ready(function(){
 /*(function () {
 
 })();*/
-</script><script>
-  window.Lazyload.js(['https://cdn.bootcss.com/jquery/3.1.1/jquery.min.js', 'https://cdn.bootcss.com/Chart.js/2.7.2/Chart.bundle.min.js'], function() {
-    var $canvas = null, $this = null, _ctx = null, _text = '';
-    $('.language-chart').each(function(){
-      $this = $(this);
-      $canvas = $('<canvas></canvas>');
-      _text = $this.text();
-      $this.text('').append($canvas);
-      _ctx = $canvas.get(0).getContext('2d');
-      (_ctx && _text) && (new Chart(_ctx, JSON.parse(_text)) && $this.attr('data-processed', true));
-    });
-  });
-</script><script type="text/x-mathjax-config">
-	var _config = { tex2jax: {
-		inlineMath: [['$','$'], ['\\(','\\)']]
-	}};_config.TeX = { equationNumbers: { autoNumber: "all" } };MathJax.Hub.Config(_config);
-</script>
-<script type="text/javascript" src="https://cdn.bootcss.com/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML" async></script><script>
-  window.Lazyload.js('https://cdn.bootcss.com/mermaid/8.0.0-rc.8/mermaid.min.js', function() {
-    mermaid.initialize({
-      startOnLoad: true
-    });
-    mermaid.init(undefined, '.language-mermaid');
-  });
 </script>
     </div>
     <script>(function () {
