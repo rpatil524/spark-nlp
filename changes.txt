@@ -1,4 +1,0 @@
-docs/_includes/demomenu.html
-docs/demos/financial_relation_extraction.md
-docs/_includes/demomenu.html
-docs/demos/financial_relation_extraction.md
