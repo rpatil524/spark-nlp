@@ -1,4 +1,12 @@
-docs/_posts/josejuanmartinez/2022-08-09-finel_crunchbase_companynames_en_3_2.md
-docs/_posts/josejuanmartinez/2022-08-09-legel_crunchbase_companynames_en_3_2.md
-docs/_posts/josejuanmartinez/2022-08-09-finel_crunchbase_companynames_en_3_2.md
-docs/_posts/josejuanmartinez/2022-08-09-legel_crunchbase_companynames_en_3_2.md
+docs/_posts/josejuanmartinez/2022-08-24-legre_whereas_en.md
+docs/_posts/josejuanmartinez/2022-09-06-finner_financial_small_en.md
+docs/_posts/josejuanmartinez/2022-09-08-finel_names2tickers_en.md
+docs/_posts/josejuanmartinez/2022-09-08-finre_acquisitions_subsidiaries_en.md
+docs/_posts/josejuanmartinez/2022-09-09-finel_tickers2names_en.md
+docs/_posts/josejuanmartinez/2022-09-09-finpipe_org_per_role_date_en.md
+docs/_posts/josejuanmartinez/2022-08-24-legre_whereas_en.md
+docs/_posts/josejuanmartinez/2022-09-06-finner_financial_small_en.md
+docs/_posts/josejuanmartinez/2022-09-08-finel_names2tickers_en.md
+docs/_posts/josejuanmartinez/2022-09-08-finre_acquisitions_subsidiaries_en.md
+docs/_posts/josejuanmartinez/2022-09-09-finel_tickers2names_en.md
+docs/_posts/josejuanmartinez/2022-09-09-finpipe_org_per_role_date_en.md
