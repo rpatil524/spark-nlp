@@ -1,4 +1,14 @@
-docs/_posts/ahmedlone127/2022-06-14-roberta_token_classifier_ticker_pipeline_en_3_0.md
+docs/_posts/josejuanmartinez/2022-09-20-legclf_cuad_confidentiality_clause_en.md
+docs/_posts/josejuanmartinez/2022-09-20-legclf_cuad_indemnifications_clause_en.md
+docs/_posts/josejuanmartinez/2022-09-20-legclf_cuad_licenses_clause_en.md
+docs/_posts/josejuanmartinez/2022-09-20-legclf_cuad_obligations_clause_en.md
+docs/_posts/josejuanmartinez/2022-09-20-legclf_cuad_whereas_clause_en.md
+docs/en/install.md
 docs/en/licensed_install.md
-docs/_posts/ahmedlone127/2022-06-14-roberta_token_classifier_ticker_pipeline_en_3_0.md
+docs/_posts/josejuanmartinez/2022-09-20-legclf_cuad_confidentiality_clause_en.md
+docs/_posts/josejuanmartinez/2022-09-20-legclf_cuad_indemnifications_clause_en.md
+docs/_posts/josejuanmartinez/2022-09-20-legclf_cuad_licenses_clause_en.md
+docs/_posts/josejuanmartinez/2022-09-20-legclf_cuad_obligations_clause_en.md
+docs/_posts/josejuanmartinez/2022-09-20-legclf_cuad_whereas_clause_en.md
+docs/en/install.md
 docs/en/licensed_install.md
