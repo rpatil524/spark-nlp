@@ -427,10 +427,10 @@
     j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-59JLR64');</script>
-<!-- End Google Tag Manager --><title>English asr_xlsr_wav2vec2_base_commonvoice_demo_colab_4_gpu TFWav2Vec2ForCTC from chrisvinsen</title><meta property="og:title" content=""/>
+<!-- End Google Tag Manager --><title>German NER for Laws</title><meta property="og:title" content=""/>
 
-<meta name="description" content="DescriptionPretrained Wav2vec2  pipeline, adapted from Hugging Face and curated to provide scalability and production-readiness using Spark NLP.asr_xlsr_wav2vec2_base_commonvoice_demo_colab_4 is a English model originally trained by chrisvinsen.NOTE: This pipeline only works on a CPU, if you need to use this pipelin...">
-<link rel="canonical" href="/2022/09/26/pipeline_asr_xlsr_wav2vec2_base_commonvoice_demo_colab_4_gpu_en.html"><link rel="alternate" type="application/rss+xml" title="Spark NLP" href="/feed.xml"><!-- start favicons snippet, use https://realfavicongenerator.net/ -->
+<meta name="description" content="DescriptionThis model can be used to detect legal entities in German text, predicting up to 19 different labels:| tag	| meaning -----------------| AN	| Anwalt | EUN	| Europäische Norm | GS	| Gesetz | GRT	| Gericht | INN	| Institution | LD	| Land | LDS	| Landschaft | LIT	| Literatur | MRK	| Marke | ORG	| Organisation...">
+<link rel="canonical" href="/2022/10/02/legner_courts_de.html"><link rel="alternate" type="application/rss+xml" title="Spark NLP" href="/feed.xml"><!-- start favicons snippet, use https://realfavicongenerator.net/ -->
 <!---->
 <!-- <link rel="apple-touch-icon" sizes="180x180" href="/fav.ico"> -->
 
@@ -826,24 +826,50 @@
 
 <!-- end custom main top snippet --><article><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script><div class="article__header"><div class="header-author"><div class="article__info clearfix"><div class="left-col">
             <a class="edit-on-github-btn" target="_blank" rel="alternate"
-               href="https://github.com/johnsnowlabs/spark-nlp/tree/master/docs/_posts/maziyarpanahi/2022-09-26-pipeline_asr_xlsr_wav2vec2_base_commonvoice_demo_colab_4_gpu_en.md">
+               href="https://github.com/johnsnowlabs/spark-nlp/tree/master/docs/_posts/josejuanmartinez/2022-10-02-legner_courts_de.md">
               <span class="fab fa-github"></span>
               <span class="edit-on-github-label">Edit on GitHub</span>
             </a>
-        </div><ul class="right-col menu"><li><i class="far fa-user"></i> <span>John Snow Labs</span></li><li><i class="far fa-calendar-alt"></i> <span>Sep 26, 2022</span>
-            </li></ul></div><meta itemprop="author" content=""/><meta itemprop="datePublished" content="2022-09-26T00:00:00+00:00"></div><header class="main-docs have_subtitle">
-          <h1>English asr_xlsr_wav2vec2_base_commonvoice_demo_colab_4_gpu TFWav2Vec2ForCTC from chrisvinsen</h1><div class="top-subtitle mont"></div></header></div><meta itemprop="headline" content="English asr_xlsr_wav2vec2_base_commonvoice_demo_colab_4_gpu TFWav2Vec2ForCTC from chrisvinsen"><div class="article__info tags_box clearfix"><ul class="left-col menu"><li>wav2vec2</li><li>en</li><li>audio</li><li>open_source</li><li>pipeline</li><li>asr</li></ul></div><meta itemprop="author" content=""/><meta itemprop="datePublished" content="2022-09-26T00:00:00+00:00">
-    <meta itemprop="keywords" content="wav2vec2,en,audio,open_source,pipeline,asr"><div class="js-article-content"><div class="model-wrap"><div class="layout--article"><!-- start custom article top snippet -->
+        </div><ul class="right-col menu"><li><i class="far fa-user"></i> <span>John Snow Labs</span></li><li><i class="far fa-calendar-alt"></i> <span>Oct 02, 2022</span>
+            </li></ul></div><meta itemprop="author" content=""/><meta itemprop="datePublished" content="2022-10-02T00:00:00+00:00"></div><header class="main-docs have_subtitle">
+          <h1>German NER for Laws</h1><div class="top-subtitle mont"></div></header></div><meta itemprop="headline" content="German NER for Laws"><div class="article__info tags_box clearfix"><ul class="left-col menu"><li>de</li><li>legal</li><li>ner</li><li>laws</li><li>court</li><li>licensed</li></ul></div><meta itemprop="author" content=""/><meta itemprop="datePublished" content="2022-10-02T00:00:00+00:00">
+    <meta itemprop="keywords" content="de,legal,ner,laws,court,licensed"><div class="js-article-content"><div class="model-wrap"><div class="layout--article"><!-- start custom article top snippet -->
 
 <!-- end custom article top snippet --><div class="article__content" itemprop="articleBody"><h2 id="description">Description</h2>
 
-<p>Pretrained Wav2vec2  pipeline, adapted from Hugging Face and curated to provide scalability and production-readiness using Spark NLP.<code class="language-plaintext highlighter-rouge">asr_xlsr_wav2vec2_base_commonvoice_demo_colab_4</code> is a English model originally trained by chrisvinsen.</p>
+<p>This model can be used to detect legal entities in German text, predicting up to 19 different labels:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>| tag	| meaning 
+-----------------
+| AN	| Anwalt 
+| EUN	| Europäische Norm 
+| GS	| Gesetz 
+| GRT	| Gericht 
+| INN	| Institution 
+| LD	| Land 
+| LDS	| Landschaft 
+| LIT	| Literatur 
+| MRK	| Marke 
+| ORG	| Organisation 
+| PER	| Person 
+| RR	| Richter 
+| RS	| Rechtssprechung 
+| ST	| Stadt 
+| STR	| Straße 
+| UN	| Unternehmen 
+| VO	| Verordnung 
+| VS	| Vorschrift 
+| VT	| Vertrag 
+</code></pre></div></div>
 
-<p>NOTE: This pipeline only works on a CPU, if you need to use this pipeline on a GPU device please use pipeline_asr_xlsr_wav2vec2_base_commonvoice_demo_colab_4</p>
+<p>German Named Entity Recognition model, trained using a Deep Learning architecture (CharCNN + LSTM) with a Court Decisions (2017-2018) dataset (check <code class="language-plaintext highlighter-rouge">Data Source</code> section). You can also find transformer-based versions of this model in our Models Hub (<code class="language-plaintext highlighter-rouge">legner_bert_base_courts</code> and <code class="language-plaintext highlighter-rouge">legner_bert_large_courts</code>)</p>
 
-<p class="btn-box"><button class="button button-orange" disabled="">Live Demo</button>
+<h2 id="predicted-entities">Predicted Entities</h2>
+
+<p><code class="language-plaintext highlighter-rouge">STR</code>, <code class="language-plaintext highlighter-rouge">LIT</code>, <code class="language-plaintext highlighter-rouge">PER</code>, <code class="language-plaintext highlighter-rouge">EUN</code>, <code class="language-plaintext highlighter-rouge">VT</code>, <code class="language-plaintext highlighter-rouge">MRK</code>, <code class="language-plaintext highlighter-rouge">INN</code>, <code class="language-plaintext highlighter-rouge">UN</code>, <code class="language-plaintext highlighter-rouge">RS</code>, <code class="language-plaintext highlighter-rouge">ORG</code>, <code class="language-plaintext highlighter-rouge">GS</code>, <code class="language-plaintext highlighter-rouge">VS</code>, <code class="language-plaintext highlighter-rouge">LDS</code>, <code class="language-plaintext highlighter-rouge">GRT</code>, <code class="language-plaintext highlighter-rouge">VO</code>, <code class="language-plaintext highlighter-rouge">RR</code>, <code class="language-plaintext highlighter-rouge">LD</code>, <code class="language-plaintext highlighter-rouge">AN</code>, <code class="language-plaintext highlighter-rouge">ST</code></p>
+
+<p class="btn-box"><a href="https://demo.johnsnowlabs.com/healthcare/NER_LEGAL_DE/" class="button button-orange">Live Demo</a>
 <button class="button button-orange" disabled="">Open in Colab</button>
-<a href="https://s3.amazonaws.com/auxdata.johnsnowlabs.com/public/models/pipeline_asr_xlsr_wav2vec2_base_commonvoice_demo_colab_4_gpu_en_4.2.0_3.0_1664198552854.zip" class="button button-orange button-orange-trans arr button-icon">Download</a></p>
+<a href="https://s3.amazonaws.com/auxdata.johnsnowlabs.com/legal/models/legner_courts_de_1.0.0_3.0_1664706079878.zip" class="button button-orange button-orange-trans arr button-icon">Download</a></p>
 
 <h2 id="how-to-use">How to use</h2>
 
@@ -851,17 +877,51 @@
   <div class="top_tab_li">   
     <button class="tab-li code-selector-active python-button">Python</button><button class="tab-li code-selector-un-active scala-button">Scala</button><button class="tab-li code-selector-un-active nlu-button">NLU</button>
 </div>
-  <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
-<span class="n">pipeline</span> <span class="o">=</span> <span class="n">PretrainedPipeline</span><span class="p">(</span><span class="s">'pipeline_asr_xlsr_wav2vec2_base_commonvoice_demo_colab_4_gpu'</span><span class="p">,</span> <span class="n">lang</span> <span class="o">=</span> <span class="s">'en'</span><span class="p">)</span>
-<span class="n">annotations</span> <span class="o">=</span>  <span class="n">pipeline</span><span class="p">.</span><span class="n">transform</span><span class="p">(</span><span class="n">audioDF</span><span class="p">)</span>
-    
+  <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">...</span>
+<span class="n">word_embeddings</span> <span class="o">=</span> <span class="n">nlp</span><span class="p">.</span><span class="n">WordEmbeddingsModel</span><span class="p">.</span><span class="n">pretrained</span><span class="p">(</span><span class="s">"w2v_cc_300d"</span><span class="p">,</span><span class="s">'de'</span><span class="p">,</span><span class="s">'clinical/models'</span><span class="p">)</span>\
+<span class="p">.</span><span class="n">setInputCols</span><span class="p">([</span><span class="s">"sentence"</span><span class="p">,</span> <span class="s">'token'</span><span class="p">])</span>\
+<span class="p">.</span><span class="n">setOutputCol</span><span class="p">(</span><span class="s">"embeddings"</span><span class="p">)</span>\
+<span class="p">.</span><span class="n">setCaseSensitive</span><span class="p">(</span><span class="bp">False</span><span class="p">)</span>
+
+<span class="n">legal_ner</span> <span class="o">=</span> <span class="n">legal</span><span class="p">.</span><span class="n">NerModel</span><span class="p">.</span><span class="n">pretrained</span><span class="p">(</span><span class="s">"legner_courts"</span><span class="p">,</span><span class="s">'de'</span><span class="p">,</span><span class="s">'legal/models'</span><span class="p">)</span> \
+<span class="p">.</span><span class="n">setInputCols</span><span class="p">([</span><span class="s">"sentence"</span><span class="p">,</span> <span class="s">"token"</span><span class="p">,</span> <span class="s">"embeddings"</span><span class="p">])</span> \
+<span class="p">.</span><span class="n">setOutputCol</span><span class="p">(</span><span class="s">"ner"</span><span class="p">)</span>
+<span class="p">...</span>
+
+<span class="n">legal_pred_pipeline</span> <span class="o">=</span> <span class="n">Pipeline</span><span class="p">(</span><span class="n">stages</span> <span class="o">=</span> <span class="p">[</span><span class="n">document_assembler</span><span class="p">,</span> <span class="n">sentence_detector</span><span class="p">,</span> <span class="n">tokenizer</span><span class="p">,</span> <span class="n">word_embeddings</span><span class="p">,</span> <span class="n">legal_ner</span><span class="p">,</span> <span class="n">ner_converter</span><span class="p">])</span>
+<span class="n">legal_light_model</span> <span class="o">=</span> <span class="n">LightPipeline</span><span class="p">(</span><span class="n">legal_pred_pipeline</span><span class="p">.</span><span class="n">fit</span><span class="p">(</span><span class="n">spark</span><span class="p">.</span><span class="n">createDataFrame</span><span class="p">([[</span><span class="s">''</span><span class="p">]]).</span><span class="n">toDF</span><span class="p">(</span><span class="s">"text"</span><span class="p">)))</span>
+
+<span class="n">result</span> <span class="o">=</span> <span class="n">legal_light_model</span><span class="p">.</span><span class="n">fullAnnotate</span><span class="p">(</span><span class="s">'''Jedoch wird der Verkehr darin naheliegend den Namen eines der bekanntesten Flüsse Deutschlands erkennen, welcher als Seitenfluss des Rheins durch Oberfranken, Unterfranken und Südhessen fließt und bei Mainz in den Rhein mündet. Klein , in : Maunz / Schmidt-Bleibtreu / Klein / Bethge , BVerfGG , § 19 Rn. 9 Richtlinien zur Bewertung des Grundvermögens – BewRGr – vom19. I September 1966 (BStBl I, S.890) '''</span><span class="p">)</span>
 </code></pre></div>  </div>
-  <div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
-<span class="k">val</span> <span class="nv">pipeline</span> <span class="k">=</span> <span class="k">new</span> <span class="nc">PretrainedPipeline</span><span class="o">(</span><span class="s">"pipeline_asr_xlsr_wav2vec2_base_commonvoice_demo_colab_4_gpu"</span><span class="o">,</span> <span class="n">lang</span> <span class="k">=</span> <span class="s">"en"</span><span class="o">)</span>
-<span class="k">val</span> <span class="nv">annotations</span> <span class="k">=</span> <span class="nv">pipeline</span><span class="o">.</span><span class="py">transform</span><span class="o">(</span><span class="n">audioDF</span><span class="o">)</span>
-    
-</code></pre></div>  </div>
+
 </div>
+
+<h2 id="results">Results</h2>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>+---+---------------------------------------------------+----------+
+| <span class="c"># |                                            Chunks | Entities |</span>
++---+---------------------------------------------------+----------+
+| 0 |                                      Deutschlands |       LD |
++---+---------------------------------------------------+----------+
+| 1 |                                            Rheins |      LDS |
++---+---------------------------------------------------+----------+
+| 2 |                                       Oberfranken |      LDS |
++---+---------------------------------------------------+----------+
+| 3 |                                      Unterfranken |      LDS |
++---+---------------------------------------------------+----------+
+| 4 |                                         Südhessen |      LDS |
++---+---------------------------------------------------+----------+
+| 5 |                                             Mainz |       ST |
++---+---------------------------------------------------+----------+
+| 6 |                                             Rhein |      LDS |
++---+---------------------------------------------------+----------+
+| 7 | Klein , <span class="k">in</span> : Maunz / Schmidt-Bleibtreu / Klein... |      LIT |
++---+---------------------------------------------------+----------+
+| 8 | Richtlinien zur Bewertung des Grundvermögens –... |       VS |
++---+---------------------------------------------------+----------+
+| 9 |                 I September 1966 <span class="o">(</span>BStBl I, S.890<span class="o">)</span> |       VS |
++---+---------------------------------------------------+----------+
+</code></pre></div></div>
 
 <h2 class="model-param" id="model-information">Model Information</h2>
 
@@ -869,42 +929,58 @@
   <tbody>
     <tr>
       <td>Model Name:</td>
-      <td>pipeline_asr_xlsr_wav2vec2_base_commonvoice_demo_colab_4_gpu</td>
-    </tr>
-    <tr>
-      <td>Type:</td>
-      <td>pipeline</td>
+      <td>legner_courts</td>
     </tr>
     <tr>
       <td>Compatibility:</td>
-      <td>Spark NLP 4.2.0+</td>
+      <td>Spark NLP for Legal 1.0.0+</td>
     </tr>
     <tr>
       <td>License:</td>
-      <td>Open Source</td>
+      <td>Licensed</td>
     </tr>
     <tr>
       <td>Edition:</td>
       <td>Official</td>
     </tr>
     <tr>
+      <td>Input Labels:</td>
+      <td>[sentence, token, embeddings]</td>
+    </tr>
+    <tr>
+      <td>Output Labels:</td>
+      <td>[ner]</td>
+    </tr>
+    <tr>
       <td>Language:</td>
-      <td>en</td>
+      <td>de</td>
     </tr>
     <tr>
       <td>Size:</td>
-      <td>1.2 GB</td>
+      <td>15.0 MB</td>
     </tr>
   </tbody>
 </table>
 
-<h2 id="included-models">Included Models</h2>
+<h2 id="references">References</h2>
 
-<ul>
-  <li>AudioAssembler</li>
-  <li>Wav2Vec2ForCTC</li>
-</ul>
-</div><div class="d-print-none"><footer class="article__footer"><meta itemprop="dateModified" content="2022-09-26T00:00:00+00:00"><!-- start custom article footer snippet -->
+<p>The dataset used to train this model is taken from Leitner, et.al (2019)</p>
+
+<p>Leitner, E., Rehm, G., and Moreno-Schneider, J. (2019). Fine-grained Named Entity Recognition in Legal Documents. In Maribel Acosta, et al., editors, Semantic Systems. The Power of AI and Knowledge Graphs. Proceedings of the 15th International Conference (SEMANTiCS2019), number 11702 in Lecture Notes in Computer Science, pages 272–287, Karlsruhe, Germany, 9. Springer. 10/11 September 2019.</p>
+
+<p>Source of the annotated text:</p>
+
+<p>Court decisions from 2017 and 2018 were selected for the dataset, published online by the Federal Ministry of Justice and Consumer Protection. The documents originate from seven federal courts: Federal Labour Court (BAG), Federal Fiscal Court (BFH), Federal Court of Justice (BGH), Federal Patent Court (BPatG), Federal Social Court (BSG), Federal Constitutional Court (BVerfG) and Federal Administrative Court (BVerwG).</p>
+
+<h2 id="benchmarking">Benchmarking</h2>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>+---------------+-------+------------+------+-------------+-----+------------+
+| Macro-average | prec: | 0.9210195, | rec: | 0.91861916, | f1: | 0.91981775 |
++---------------+-------+------------+------+-------------+-----+------------+
+| Micro-average | prec: | 0.9833763, | rec: | 0.9837547,  | f1: | 0.9835655  |
++---------------+-------+------------+------+-------------+-----+------------+
+</code></pre></div></div>
+</div><div class="d-print-none"><footer class="article__footer"><meta itemprop="dateModified" content="2022-10-02T00:00:00+00:00"><!-- start custom article footer snippet -->
 
 <!-- end custom article footer snippet --></footer>
 
@@ -987,7 +1063,7 @@ if(document.querySelectorAll('.tab-li-second')) {
             e.preventDefault();
             let tabAttribute = element.getAttribute('data-type'),
                 tabLiInner = element.parentNode.querySelectorAll('.tab-li-second'),
-                tabBoxInner = element.parentNode.parentNode.querySelectorAll('.tabs-box-medic-inner');
+                tabBoxInner = element.parentNode.parentNode.parentNode.querySelectorAll('.tabs-box-medic-inner');
             
             //remove active class
             tabBoxInner.forEach(item => {
@@ -1022,14 +1098,30 @@ if(document.querySelectorAll('.tab-li-second')) {
 
 //Third tabs
 if(document.querySelectorAll('.tab-li-inner')) {
-    let tabLiSecond = document.querySelectorAll('.tab-li-inner');
+
+
+
+    let tabLiSecond = document.querySelectorAll('.tab-li-inner'),
+        tabLiTop = document.querySelectorAll('.toptab-second'),
+        tabLi = document.querySelectorAll('.toptab-second p');
+
+        console.log(tabLiTop);
+
+    tabLiTop.forEach(e => {        
+        e.nextElementSibling.classList.add('active');
+    });
+
+    tabLi.forEach(e => {        
+        e.firstChild.classList.add('active');
+    });
+
 
     tabLiSecond.forEach(element => {
         element.addEventListener('click', function(e) {
             e.preventDefault();
             let tabAttributeSecond = element.getAttribute('data-type'),
                 tabLiInnerSecond = element.parentNode.querySelectorAll('.tab-li-inner'),
-                tabBoxInnerSecond = element.parentNode.parentNode.querySelectorAll('.tabs-box-medic-inner-second');
+                tabBoxInnerSecond = element.parentNode.parentNode.parentNode.querySelectorAll('.tabs-box-medic-inner-second');
             
             //remove active class
             tabBoxInnerSecond.forEach(item => {
@@ -1119,7 +1211,7 @@ hr.code-selector-underlie {
 
 }
 
-</style><div class="article__section-navigator clearfix"><div class="previous nav_link"><span>PREVIOUS</span><a href="/2022/09/26/pipeline_asr_xlsr_punctuation_gpu_en.html">English asr_xlsr_punctuation_gpu TFWav2Vec2ForCTC from boris</a></div></div></div>
+</style><div class="article__section-navigator clearfix"><div class="previous nav_link"><span>PREVIOUS</span><a href="/2022/10/02/legner_bert_large_courts_de.html">German NER for Laws (Bert, Large)</a></div></div></div>
 
 </div>
 </div>
@@ -1514,8 +1606,10 @@ if(document.querySelector('.btn.disable')) {
   window.Lazyload.js(SOURCES.jquery, function() {
     function toc(options) {
       var $root = this, $window = $(window), $scrollTarget, $scroller, $tocUl = $('<ul class="toc toc--ellipsis"></ul>'), $tocLi, $headings, $activeLast, $activeCur,
-        selectors = 'h1,h2,h3', container = 'body', scrollTarget = window, scroller = 'html, body', disabled = false,
+        selectors = 'h1,h2,h3',  container = 'body', scrollTarget = window, scroller = 'html, body', disabled = false,
         headingsPos, scrolling = false, hasRendered = false, hasInit = false;
+
+        
 
       function setOptions(options) {
         var _options = options || {};
@@ -1557,7 +1651,8 @@ if(document.querySelector('.btn.disable')) {
           $root.append($tocUl);
           $headings.each(function() {
             var $this = $(this);
-            $tocUl.append($('<li></li>').addClass('toc-' + $this.prop('tagName').toLowerCase())
+            $tocUl.append($('<li></li>').addClass('toc-' + $this.prop('tagName')
+              .toLowerCase() + ' ' + $this.prop('className'))
               .append($('<a></a>').text($this.text()).attr('href', '#' + $this.prop('id'))));
           });
           $tocLi = $tocUl.children('li');
@@ -1714,7 +1809,7 @@ if(document.querySelectorAll('.tab-li-second')) {
             e.preventDefault();
             let tabAttribute = element.getAttribute('data-type'),
                 tabLiInner = element.parentNode.querySelectorAll('.tab-li-second'),
-                tabBoxInner = element.parentNode.parentNode.querySelectorAll('.tabs-box-medic-inner');
+                tabBoxInner = element.parentNode.parentNode.parentNode.querySelectorAll('.tabs-box-medic-inner');
             
             //remove active class
             tabBoxInner.forEach(item => {
@@ -1749,14 +1844,30 @@ if(document.querySelectorAll('.tab-li-second')) {
 
 //Third tabs
 if(document.querySelectorAll('.tab-li-inner')) {
-    let tabLiSecond = document.querySelectorAll('.tab-li-inner');
+
+
+
+    let tabLiSecond = document.querySelectorAll('.tab-li-inner'),
+        tabLiTop = document.querySelectorAll('.toptab-second'),
+        tabLi = document.querySelectorAll('.toptab-second p');
+
+        console.log(tabLiTop);
+
+    tabLiTop.forEach(e => {        
+        e.nextElementSibling.classList.add('active');
+    });
+
+    tabLi.forEach(e => {        
+        e.firstChild.classList.add('active');
+    });
+
 
     tabLiSecond.forEach(element => {
         element.addEventListener('click', function(e) {
             e.preventDefault();
             let tabAttributeSecond = element.getAttribute('data-type'),
                 tabLiInnerSecond = element.parentNode.querySelectorAll('.tab-li-inner'),
-                tabBoxInnerSecond = element.parentNode.parentNode.querySelectorAll('.tabs-box-medic-inner-second');
+                tabBoxInnerSecond = element.parentNode.parentNode.parentNode.querySelectorAll('.tabs-box-medic-inner-second');
             
             //remove active class
             tabBoxInnerSecond.forEach(item => {
@@ -2239,8 +2350,10 @@ if(document.querySelector('.btn.disable')) {
   window.Lazyload.js(SOURCES.jquery, function() {
     function toc(options) {
       var $root = this, $window = $(window), $scrollTarget, $scroller, $tocUl = $('<ul class="toc toc--ellipsis"></ul>'), $tocLi, $headings, $activeLast, $activeCur,
-        selectors = 'h1,h2,h3', container = 'body', scrollTarget = window, scroller = 'html, body', disabled = false,
+        selectors = 'h1,h2,h3',  container = 'body', scrollTarget = window, scroller = 'html, body', disabled = false,
         headingsPos, scrolling = false, hasRendered = false, hasInit = false;
+
+        
 
       function setOptions(options) {
         var _options = options || {};
@@ -2282,7 +2395,8 @@ if(document.querySelector('.btn.disable')) {
           $root.append($tocUl);
           $headings.each(function() {
             var $this = $(this);
-            $tocUl.append($('<li></li>').addClass('toc-' + $this.prop('tagName').toLowerCase())
+            $tocUl.append($('<li></li>').addClass('toc-' + $this.prop('tagName')
+              .toLowerCase() + ' ' + $this.prop('className'))
               .append($('<a></a>').text($this.text()).attr('href', '#' + $this.prop('id'))));
           });
           $tocLi = $tocUl.children('li');

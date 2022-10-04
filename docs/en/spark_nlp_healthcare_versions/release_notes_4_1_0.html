@@ -390,7 +390,7 @@
 <path d="M20.2658 26.412H8.38867V26.5781H20.2658V26.412Z" fill="#9EDEFA"/>
 </svg>
 -->
-</a><div class="sidebar-toc"><ul class="toc toc--navigator"><li class="toc-h1">Spark NLP for Healthcare</li><li class="toc-h2"><a href="/docs/en/license_getting_started">Getting Started</a></li><li class="toc-h2"><a href="/docs/en/licensed_install">Installation</a></li><li class="toc-h2"><a href="/docs/en/licensed_annotators">Annotators</a></li><li class="toc-h2"><a href="/docs/en/licensed_training">Training</a></li><li class="toc-h2"><a href="/docs/en/licensed_models">Models</a></li><li class="toc-h2"><a href="/docs/en/evaluation">Evaluation</a></li><li class="toc-h2"><a href="/docs/en/licensed_serving_spark_nlp_via_api_synapseml">Serving Spark NLP&#58 SynapseML</a></li><li class="toc-h2"><a href="/docs/en/licensed_serving_spark_nlp_via_api_fastapi">Serving Spark NLP&#58 FastAPI</a></li><li class="toc-h2"><a href="/licensed/api/">Scala API (Scaladoc)</a></li><li class="toc-h2"><a href="/licensed/api/python">Python API (Sphinx)</a></li><li class="toc-h2"><a href="/docs/en/licensed_version_compatibility">Version Compatibility</a></li><li class="toc-h2"><a href="/docs/en/licensed_release_notes">Release Notes</a></li><li class="toc-h2"><a href="/docs/en/benchmark">Cluster Speed Benchmarks</a></li><li class="toc-h2"><a href="/docs/en/cpu-ner-benchmark">CPU NER Benchmarks</a></li><li class="toc-h2"><a href="/docs/en/CPUvsGPUbenchmark_healthcare">GPU vs CPU benchmarks</a></li><li class="toc-h2"><a href="/docs/en/best_practices_pretrained_models">Best Practices Using Pretrained Models Together</a></li></ul></div></div><div class="page__main js-page-main has-aside cell cell--auto">
+</a><div class="sidebar-toc"><ul class="toc toc--navigator"><li class="toc-h1">Licensed libraries</li><li class="toc-h2"><a href="/docs/en/licensed_annotators">Licensed Annotators</a></li><li class="toc-h1">Spark NLP for Healthcare</li><li class="toc-h2"><a href="/docs/en/license_getting_started">Getting Started</a></li><li class="toc-h2"><a href="/docs/en/licensed_install">Installation</a></li><li class="toc-h2"><a href="/docs/en/licensed_training">Training</a></li><li class="toc-h2"><a href="/docs/en/licensed_models">Models</a></li><li class="toc-h2"><a href="/docs/en/evaluation">Evaluation</a></li><li class="toc-h2"><a href="/docs/en/licensed_serving_spark_nlp_via_api_synapseml">Serving Spark NLP&#58 SynapseML</a></li><li class="toc-h2"><a href="/docs/en/licensed_serving_spark_nlp_via_api_fastapi">Serving Spark NLP&#58 FastAPI</a></li><li class="toc-h2"><a href="/licensed/api/">Scala API (Scaladoc)</a></li><li class="toc-h2"><a href="/licensed/api/python">Python API (Sphinx)</a></li><li class="toc-h2"><a href="/docs/en/licensed_version_compatibility">Version Compatibility</a></li><li class="toc-h2"><a href="/docs/en/licensed_release_notes">Release Notes</a></li><li class="toc-h2"><a href="/docs/en/benchmark">Cluster Speed Benchmarks</a></li><li class="toc-h2"><a href="/docs/en/cpu-ner-benchmark">CPU NER Benchmarks</a></li><li class="toc-h2"><a href="/docs/en/CPUvsGPUbenchmark_healthcare">GPU vs CPU benchmarks</a></li><li class="toc-h2"><a href="/docs/en/best_practices_pretrained_models">Best Practices Using Pretrained Models Together</a></li><li class="toc-h2"><a href="/docs/en/wiki">Wiki</a></li></ul></div></div><div class="page__main js-page-main has-aside cell cell--auto">
 
       <div class="page__main-inner"><div class="page__header d-print-none"><!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-59JLR64"
@@ -531,31 +531,36 @@
             <i class="far fa-edit"></i></a></div><meta itemprop="headline" content="Spark NLP for Healthcare Release Notes 4.1.0"><meta itemprop="author" content=""/><div class="js-article-content"><div class="docs-wrapper">
 <div class="layout--article"><!-- start custom article top snippet -->
 
-<!-- end custom article top snippet --><div class="article__content" itemprop="articleBody"><h2 id="410">4.1.0</h2>
+<!-- end custom article top snippet --><div class="article__content" itemprop="articleBody"><div class="h3-box">
 
-<h4 id="highlights">Highlights</h4>
+  <h2 id="section">4.1.0</h2>
 
-<ul>
-  <li>Zero-Shot NER model to extract entities with no training dataset</li>
-  <li>7 new clinical NER models in Spanish</li>
-  <li>8 new clinical classification models in English and German related to public health topics (depression, covid sentiment, health mentions)</li>
-  <li>New pretrained chunk mapper model (<code class="language-plaintext highlighter-rouge">drug_ade_mapper</code>) to map drugs with their corresponding adverse drug events</li>
-  <li>A new pretrained resolver pipeline (<code class="language-plaintext highlighter-rouge">medication_resolver_pipeline</code>) to extract medications and resolve their adverse reactions (ADE), RxNorm, UMLS, NDC, SNOMED CT codes and action/treatments in clinical text with a single line of code.</li>
-  <li>Updated NER profiling pretrained pipelines with new NER models to allow running 64 clinical NER models at once</li>
-  <li>Core improvements and bug fixes</li>
-  <li>New and updated notebooks</li>
-  <li>20+ new clinical models and pipelines added &amp; updated in total</li>
-</ul>
+  <h4 id="highlights">Highlights</h4>
 
-<h4 id="zero-shot-ner-model-to-extract-entities-with-no-training-dataset">Zero-Shot NER model to Extract Entities With No Training Dataset</h4>
+  <ul>
+    <li>Zero-Shot NER model to extract entities with no training dataset</li>
+    <li>7 new clinical NER models in Spanish</li>
+    <li>8 new clinical classification models in English and German related to public health topics (depression, covid sentiment, health mentions)</li>
+    <li>New pretrained chunk mapper model (<code class="language-plaintext highlighter-rouge">drug_ade_mapper</code>) to map drugs with their corresponding adverse drug events</li>
+    <li>A new pretrained resolver pipeline (<code class="language-plaintext highlighter-rouge">medication_resolver_pipeline</code>) to extract medications and resolve their adverse reactions (ADE), RxNorm, UMLS, NDC, SNOMED CT codes and action/treatments in clinical text with a single line of code.</li>
+    <li>Updated NER profiling pretrained pipelines with new NER models to allow running 64 clinical NER models at once</li>
+    <li>Core improvements and bug fixes</li>
+    <li>New and updated notebooks</li>
+    <li>20+ new clinical models and pipelines added &amp; updated in total</li>
+  </ul>
 
-<p>We are releasing the first of its kind Zero-Shot NER model that can detect any named entities without using any annotated dataset to train a model. It allows extracting entities by crafting appropriate prompts to query <strong>any RoBERTa Question Answering model</strong>.</p>
+</div>
+<div class="h3-box">
 
-<p>See <a href="https://nlp.johnsnowlabs.com/2022/08/29/zero_shot_ner_roberta_en.html">Models Hub Page</a> for more details.</p>
+  <h4 id="zero-shot-ner-model-to-extract-entities-with-no-training-dataset">Zero-Shot NER model to Extract Entities With No Training Dataset</h4>
 
-<p><em>Example</em> :</p>
+  <p>We are releasing the first of its kind Zero-Shot NER model that can detect any named entities without using any annotated dataset to train a model. It allows extracting entities by crafting appropriate prompts to query <strong>any RoBERTa Question Answering model</strong>.</p>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">...</span>
+  <p>See <a href="https://nlp.johnsnowlabs.com/2022/08/29/zero_shot_ner_roberta_en.html">Models Hub Page</a> for more details.</p>
+
+  <p><em>Example</em> :</p>
+
+  <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">...</span>
 <span class="n">zero_shot_ner</span> <span class="o">=</span> <span class="n">ZeroShotNerModel</span><span class="p">.</span><span class="n">pretrained</span><span class="p">(</span><span class="s">"zero_shot_ner_roberta"</span><span class="p">,</span> <span class="s">"en"</span><span class="p">,</span> <span class="s">"clincial/models"</span><span class="p">)</span>\
     <span class="p">.</span><span class="n">setInputCols</span><span class="p">([</span><span class="s">"sentence"</span><span class="p">,</span> <span class="s">"token"</span><span class="p">])</span>\
     <span class="p">.</span><span class="n">setOutputCol</span><span class="p">(</span><span class="s">"zero_shot_ner"</span><span class="p">)</span>\
@@ -572,11 +577,11 @@
 <span class="n">sample_text</span> <span class="o">=</span> <span class="p">[</span><span class="s">"The doctor pescribed Majezik for my severe headache."</span><span class="p">,</span>
                <span class="s">"The patient was admitted to the hospital for his colon cancer."</span><span class="p">,</span>
                <span class="s">"27 years old patient was admitted to clinic on Sep 1st by Dr. X for a right-sided pleural effusion for thoracentesis."</span><span class="p">]</span>
-</code></pre></div></div>
+</code></pre></div>  </div>
 
-<p><em>Results</em> :</p>
+  <p><em>Results</em> :</p>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>+------------------------------------------------+--------------+----------+
+  <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>+------------------------------------------------+--------------+----------+
 |                                           chunk|     ner_label|confidence|
 +------------------------------------------------+--------------+----------+
 |                                         Majezik|          DRUG|0.64671576|
@@ -586,75 +591,78 @@
 |                                         Sep 1st|ADMISSION_DATE|0.95646095|
 |a right-sided pleural effusion <span class="k">for </span>thoracentesis|       PROBLEM|0.50026613|
 +------------------------------------------------+--------------+----------+
-</code></pre></div></div>
+</code></pre></div>  </div>
 
-<h4 id="7-new-clinical-ner-models-in-spanish">7 New Clinical NER Models in Spanish</h4>
+</div>
+<div class="h3-box">
 
-<ul>
-  <li>We are releasing 4 new <code class="language-plaintext highlighter-rouge">MedicalNerModel</code> and 3 new <code class="language-plaintext highlighter-rouge">MedicalBertForTokenClassifier</code> NER models in Spanish.</li>
-</ul>
+  <h4 id="new-clinical-ner-models-in-spanish">7 New Clinical NER Models in Spanish</h4>
 
-<table>
-  <thead>
-    <tr>
-      <th>model name</th>
-      <th>description</th>
-      <th>predicted entities</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><a href="https://nlp.johnsnowlabs.com/2022/08/13/ner_negation_uncertainty_es_3_0.html">ner_negation_uncertainty</a></td>
-      <td>This model detects relevant entities from Spanish medical texts</td>
-      <td><code class="language-plaintext highlighter-rouge">NEG</code> <code class="language-plaintext highlighter-rouge">UNC</code> <code class="language-plaintext highlighter-rouge">USCO</code> <code class="language-plaintext highlighter-rouge">NSCO</code></td>
-    </tr>
-    <tr>
-      <td><a href="https://nlp.johnsnowlabs.com/2022/08/14/disease_mentions_tweet_es_3_0.html">disease_mentions_tweet</a></td>
-      <td>This model detects disease mentions in Spanish tweets</td>
-      <td><code class="language-plaintext highlighter-rouge">ENFERMEDAD</code></td>
-    </tr>
-    <tr>
-      <td><a href="https://nlp.johnsnowlabs.com/2022/08/12/ner_clinical_trials_abstracts_es_3_0.html">ner_clinical_trials_abstracts</a></td>
-      <td>This model detects relevant entities from Spanish clinical trial abstracts</td>
-      <td><code class="language-plaintext highlighter-rouge">CHEM</code> <code class="language-plaintext highlighter-rouge">DISO</code> <code class="language-plaintext highlighter-rouge">PROC</code></td>
-    </tr>
-    <tr>
-      <td><a href="https://nlp.johnsnowlabs.com/2022/08/13/ner_pharmacology_es_3_0.html">ner_pharmacology</a></td>
-      <td>This model detects pharmacological entities from Spanish medical texts</td>
-      <td><code class="language-plaintext highlighter-rouge">PROTEINAS</code> <code class="language-plaintext highlighter-rouge">NORMALIZABLES</code></td>
-    </tr>
-    <tr>
-      <td><a href="https://nlp.johnsnowlabs.com/2022/08/11/bert_token_classifier_ner_clinical_trials_abstracts_es_3_0.html">bert_token_classifier_ner_clinical_trials_abstracts</a></td>
-      <td>This model detects relevant entities from Spanish clinical trial abstracts</td>
-      <td><code class="language-plaintext highlighter-rouge">CHEM</code> <code class="language-plaintext highlighter-rouge">DISO</code> <code class="language-plaintext highlighter-rouge">PROC</code></td>
-    </tr>
-    <tr>
-      <td><a href="https://nlp.johnsnowlabs.com/2022/08/11/bert_token_classifier_negation_uncertainty_es_3_0.html">bert_token_classifier_negation_uncertainty</a></td>
-      <td>This model detects relevant entities from Spanish medical texts</td>
-      <td><code class="language-plaintext highlighter-rouge">NEG</code> <code class="language-plaintext highlighter-rouge">NSCO</code> <code class="language-plaintext highlighter-rouge">UNC</code> <code class="language-plaintext highlighter-rouge">USCO</code></td>
-    </tr>
-    <tr>
-      <td><a href="https://nlp.johnsnowlabs.com/2022/08/11/bert_token_classifier_pharmacology_es_3_0.html">bert_token_classifier_pharmacology</a></td>
-      <td>This model detects pharmacological entities from Spanish medical texts</td>
-      <td><code class="language-plaintext highlighter-rouge">PROTEINAS</code> <code class="language-plaintext highlighter-rouge">NORMALIZABLES</code></td>
-    </tr>
-  </tbody>
-</table>
+  <ul>
+    <li>We are releasing 4 new <code class="language-plaintext highlighter-rouge">MedicalNerModel</code> and 3 new <code class="language-plaintext highlighter-rouge">MedicalBertForTokenClassifier</code> NER models in Spanish.</li>
+  </ul>
 
-<p><em>Example</em> :</p>
+  <table>
+    <thead>
+      <tr>
+        <th>model name</th>
+        <th>description</th>
+        <th>predicted entities</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a href="https://nlp.johnsnowlabs.com/2022/08/13/ner_negation_uncertainty_es_3_0.html">ner_negation_uncertainty</a></td>
+        <td>This model detects relevant entities from Spanish medical texts</td>
+        <td><code class="language-plaintext highlighter-rouge">NEG</code> <code class="language-plaintext highlighter-rouge">UNC</code> <code class="language-plaintext highlighter-rouge">USCO</code> <code class="language-plaintext highlighter-rouge">NSCO</code></td>
+      </tr>
+      <tr>
+        <td><a href="https://nlp.johnsnowlabs.com/2022/08/14/disease_mentions_tweet_es_3_0.html">disease_mentions_tweet</a></td>
+        <td>This model detects disease mentions in Spanish tweets</td>
+        <td><code class="language-plaintext highlighter-rouge">ENFERMEDAD</code></td>
+      </tr>
+      <tr>
+        <td><a href="https://nlp.johnsnowlabs.com/2022/08/12/ner_clinical_trials_abstracts_es_3_0.html">ner_clinical_trials_abstracts</a></td>
+        <td>This model detects relevant entities from Spanish clinical trial abstracts</td>
+        <td><code class="language-plaintext highlighter-rouge">CHEM</code> <code class="language-plaintext highlighter-rouge">DISO</code> <code class="language-plaintext highlighter-rouge">PROC</code></td>
+      </tr>
+      <tr>
+        <td><a href="https://nlp.johnsnowlabs.com/2022/08/13/ner_pharmacology_es_3_0.html">ner_pharmacology</a></td>
+        <td>This model detects pharmacological entities from Spanish medical texts</td>
+        <td><code class="language-plaintext highlighter-rouge">PROTEINAS</code> <code class="language-plaintext highlighter-rouge">NORMALIZABLES</code></td>
+      </tr>
+      <tr>
+        <td><a href="https://nlp.johnsnowlabs.com/2022/08/11/bert_token_classifier_ner_clinical_trials_abstracts_es_3_0.html">bert_token_classifier_ner_clinical_trials_abstracts</a></td>
+        <td>This model detects relevant entities from Spanish clinical trial abstracts</td>
+        <td><code class="language-plaintext highlighter-rouge">CHEM</code> <code class="language-plaintext highlighter-rouge">DISO</code> <code class="language-plaintext highlighter-rouge">PROC</code></td>
+      </tr>
+      <tr>
+        <td><a href="https://nlp.johnsnowlabs.com/2022/08/11/bert_token_classifier_negation_uncertainty_es_3_0.html">bert_token_classifier_negation_uncertainty</a></td>
+        <td>This model detects relevant entities from Spanish medical texts</td>
+        <td><code class="language-plaintext highlighter-rouge">NEG</code> <code class="language-plaintext highlighter-rouge">NSCO</code> <code class="language-plaintext highlighter-rouge">UNC</code> <code class="language-plaintext highlighter-rouge">USCO</code></td>
+      </tr>
+      <tr>
+        <td><a href="https://nlp.johnsnowlabs.com/2022/08/11/bert_token_classifier_pharmacology_es_3_0.html">bert_token_classifier_pharmacology</a></td>
+        <td>This model detects pharmacological entities from Spanish medical texts</td>
+        <td><code class="language-plaintext highlighter-rouge">PROTEINAS</code> <code class="language-plaintext highlighter-rouge">NORMALIZABLES</code></td>
+      </tr>
+    </tbody>
+  </table>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">...</span>
+  <p><em>Example</em> :</p>
+
+  <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">...</span>
 <span class="n">ner</span> <span class="o">=</span> <span class="n">MedicalNerModel</span><span class="p">.</span><span class="n">pretrained</span><span class="p">(</span><span class="s">'ner_clinical_trials_abstracts'</span><span class="p">,</span> <span class="s">"es"</span><span class="p">,</span> <span class="s">"clinical/models"</span><span class="p">)</span> \
 	<span class="p">.</span><span class="n">setInputCols</span><span class="p">([</span><span class="s">"sentence"</span><span class="p">,</span> <span class="s">"token"</span><span class="p">,</span> <span class="s">"embeddings"</span><span class="p">])</span> \
 	<span class="p">.</span><span class="n">setOutputCol</span><span class="p">(</span><span class="s">"ner"</span><span class="p">)</span>
 
 <span class="n">example_text</span><span class="o">=</span>  <span class="s">""""Efecto de la suplementación con ácido fólico sobre los niveles de homocisteína total en pacientes en hemodiálisis. La hiperhomocisteinemia es un marcador de riesgo independiente de morbimortalidad cardiovascular. Hemos prospectivamente reducir los niveles de homocisteína total (tHcy) mediante suplemento con ácido fólico y vitamina B6 (pp), valorando su posible correlación con dosis de diálisis, función  residual y parámetros nutricionales.""""
 
-</span></code></pre></div></div>
+</span></code></pre></div>  </div>
 
-<p><em>Results</em> :</p>
+  <p><em>Results</em> :</p>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>+-----------------------------+---------+
+  <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>+-----------------------------+---------+
 |chunk                        |ner_label|
 +-----------------------------+---------+
 |suplementación               |PROC     |
@@ -670,96 +678,102 @@
 |diálisis                     |PROC     |
 |función  residual            |PROC     |
 +-----------------------------+---------+
-</code></pre></div></div>
+</code></pre></div>  </div>
 
-<h4 id="8-new-clinical-classification-models-in-english-and-german-related-to-public-health-topics-depression-covid-sentiment-health-mentions">8 New Clinical Classification Models in English and German Related to Public Health Topics (Depression, Covid Sentiment, Health Mentions)</h4>
+</div>
+<div class="h3-box">
 
-<ul>
-  <li>We are releasing 8 new <code class="language-plaintext highlighter-rouge">MedicalBertForSequenceClassification</code> models to classify text from social media data in English and German related to public health topics (depression, covid sentiment, health mentions)</li>
-</ul>
+  <h4 id="new-clinical-classification-models-in-english-and-german-related-to-public-health-topics-depression-covid-sentiment-health-mentions">8 New Clinical Classification Models in English and German Related to Public Health Topics (Depression, Covid Sentiment, Health Mentions)</h4>
 
-<table>
-  <thead>
-    <tr>
-      <th>model name</th>
-      <th>description</th>
-      <th>predicted entities</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><a href="https://nlp.johnsnowlabs.com/2022/08/10/bert_sequence_classifier_depression_binary_en_3_0.html">bert_sequence_classifier_depression_binary</a></td>
-      <td>This model classifies whether a social media text expresses depression or not.</td>
-      <td><code class="language-plaintext highlighter-rouge">no-depression</code> <code class="language-plaintext highlighter-rouge">depression</code></td>
-    </tr>
-    <tr>
-      <td><a href="https://nlp.johnsnowlabs.com/2022/08/10/bert_sequence_classifier_health_mentions_gbert_large_de_3_0.html">bert_sequence_classifier_health_mentions_gbert_large</a></td>
-      <td>This GBERT-large based model classifies public health mentions in German social media text.</td>
-      <td><code class="language-plaintext highlighter-rouge">non-health</code> <code class="language-plaintext highlighter-rouge">health-related</code></td>
-    </tr>
-    <tr>
-      <td><a href="https://nlp.johnsnowlabs.com/2022/08/10/bert_sequence_classifier_health_mentions_medbert_de_3_0.html">bert_sequence_classifier_health_mentions_medbert</a></td>
-      <td>This German-MedBERT based model classifies public health mentions in German social media text.</td>
-      <td><code class="language-plaintext highlighter-rouge">non-health</code> <code class="language-plaintext highlighter-rouge">health-related</code></td>
-    </tr>
-    <tr>
-      <td><a href="https://nlp.johnsnowlabs.com/2022/08/10/bert_sequence_classifier_health_mentions_gbert_de_3_0.html">bert_sequence_classifier_health_mentions_gbert</a></td>
-      <td>This GBERT-large based model classifies public health mentions in German social media text.</td>
-      <td><code class="language-plaintext highlighter-rouge">non-health</code> <code class="language-plaintext highlighter-rouge">health-related</code></td>
-    </tr>
-    <tr>
-      <td><a href="https://nlp.johnsnowlabs.com/2022/08/10/bert_sequence_classifier_health_mentions_bert_de_3_0.html">bert_sequence_classifier_health_mentions_bert</a></td>
-      <td>This bert-base-german based model classifies public health mentions in German social media text.</td>
-      <td><code class="language-plaintext highlighter-rouge">non-health</code> <code class="language-plaintext highlighter-rouge">health-related</code></td>
-    </tr>
-    <tr>
-      <td><a href="https://nlp.johnsnowlabs.com/2022/08/09/bert_sequence_classifier_depression_twitter_en_3_0.html">bert_sequence_classifier_depression_twitter</a></td>
-      <td>This PHS-BERT based model classifies whether tweets contain depressive text or not.</td>
-      <td><code class="language-plaintext highlighter-rouge">depression</code> <code class="language-plaintext highlighter-rouge">no-depression</code></td>
-    </tr>
-    <tr>
-      <td><a href="https://nlp.johnsnowlabs.com/2022/08/09/bert_sequence_classifier_depression_en_3_0.html">bert_sequence_classifier_depression</a></td>
-      <td>This PHS-BERT based model classifies depression level of social media text into three levels.</td>
-      <td><code class="language-plaintext highlighter-rouge">no-depression</code> <code class="language-plaintext highlighter-rouge">minimum</code> <code class="language-plaintext highlighter-rouge">high-depression</code></td>
-    </tr>
-    <tr>
-      <td><a href="https://nlp.johnsnowlabs.com/2022/08/01/bert_sequence_classifier_covid_sentiment_en_3_0.html">bert_sequence_classifier_covid_sentiment</a></td>
-      <td>This BioBERT based sentiment analysis model classifies whether a tweet contains positive, negative, or neutral sentiments about COVID-19 pandemic.</td>
-      <td><code class="language-plaintext highlighter-rouge">neutral</code> <code class="language-plaintext highlighter-rouge">positive</code> <code class="language-plaintext highlighter-rouge">negative</code></td>
-    </tr>
-  </tbody>
-</table>
+  <ul>
+    <li>We are releasing 8 new <code class="language-plaintext highlighter-rouge">MedicalBertForSequenceClassification</code> models to classify text from social media data in English and German related to public health topics (depression, covid sentiment, health mentions)</li>
+  </ul>
 
-<p><em>Example</em> :</p>
+  <table>
+    <thead>
+      <tr>
+        <th>model name</th>
+        <th>description</th>
+        <th>predicted entities</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a href="https://nlp.johnsnowlabs.com/2022/08/10/bert_sequence_classifier_depression_binary_en_3_0.html">bert_sequence_classifier_depression_binary</a></td>
+        <td>This model classifies whether a social media text expresses depression or not.</td>
+        <td><code class="language-plaintext highlighter-rouge">no-depression</code> <code class="language-plaintext highlighter-rouge">depression</code></td>
+      </tr>
+      <tr>
+        <td><a href="https://nlp.johnsnowlabs.com/2022/08/10/bert_sequence_classifier_health_mentions_gbert_large_de_3_0.html">bert_sequence_classifier_health_mentions_gbert_large</a></td>
+        <td>This GBERT-large based model classifies public health mentions in German social media text.</td>
+        <td><code class="language-plaintext highlighter-rouge">non-health</code> <code class="language-plaintext highlighter-rouge">health-related</code></td>
+      </tr>
+      <tr>
+        <td><a href="https://nlp.johnsnowlabs.com/2022/08/10/bert_sequence_classifier_health_mentions_medbert_de_3_0.html">bert_sequence_classifier_health_mentions_medbert</a></td>
+        <td>This German-MedBERT based model classifies public health mentions in German social media text.</td>
+        <td><code class="language-plaintext highlighter-rouge">non-health</code> <code class="language-plaintext highlighter-rouge">health-related</code></td>
+      </tr>
+      <tr>
+        <td><a href="https://nlp.johnsnowlabs.com/2022/08/10/bert_sequence_classifier_health_mentions_gbert_de_3_0.html">bert_sequence_classifier_health_mentions_gbert</a></td>
+        <td>This GBERT-large based model classifies public health mentions in German social media text.</td>
+        <td><code class="language-plaintext highlighter-rouge">non-health</code> <code class="language-plaintext highlighter-rouge">health-related</code></td>
+      </tr>
+      <tr>
+        <td><a href="https://nlp.johnsnowlabs.com/2022/08/10/bert_sequence_classifier_health_mentions_bert_de_3_0.html">bert_sequence_classifier_health_mentions_bert</a></td>
+        <td>This bert-base-german based model classifies public health mentions in German social media text.</td>
+        <td><code class="language-plaintext highlighter-rouge">non-health</code> <code class="language-plaintext highlighter-rouge">health-related</code></td>
+      </tr>
+      <tr>
+        <td><a href="https://nlp.johnsnowlabs.com/2022/08/09/bert_sequence_classifier_depression_twitter_en_3_0.html">bert_sequence_classifier_depression_twitter</a></td>
+        <td>This PHS-BERT based model classifies whether tweets contain depressive text or not.</td>
+        <td><code class="language-plaintext highlighter-rouge">depression</code> <code class="language-plaintext highlighter-rouge">no-depression</code></td>
+      </tr>
+      <tr>
+        <td><a href="https://nlp.johnsnowlabs.com/2022/08/09/bert_sequence_classifier_depression_en_3_0.html">bert_sequence_classifier_depression</a></td>
+        <td>This PHS-BERT based model classifies depression level of social media text into three levels.</td>
+        <td><code class="language-plaintext highlighter-rouge">no-depression</code> <code class="language-plaintext highlighter-rouge">minimum</code> <code class="language-plaintext highlighter-rouge">high-depression</code></td>
+      </tr>
+      <tr>
+        <td><a href="https://nlp.johnsnowlabs.com/2022/08/01/bert_sequence_classifier_covid_sentiment_en_3_0.html">bert_sequence_classifier_covid_sentiment</a></td>
+        <td>This BioBERT based sentiment analysis model classifies whether a tweet contains positive, negative, or neutral sentiments about COVID-19 pandemic.</td>
+        <td><code class="language-plaintext highlighter-rouge">neutral</code> <code class="language-plaintext highlighter-rouge">positive</code> <code class="language-plaintext highlighter-rouge">negative</code></td>
+      </tr>
+    </tbody>
+  </table>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">...</span>
+  <p><em>Example</em> :</p>
+
+  <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">...</span>
 <span class="n">sequenceClassifier</span> <span class="o">=</span> <span class="n">MedicalBertForSequenceClassification</span><span class="p">.</span><span class="n">pretrained</span><span class="p">(</span><span class="s">"bert_sequence_classifier_depression_twitter"</span><span class="p">,</span> <span class="s">"en"</span><span class="p">,</span> <span class="s">"clinical/models"</span><span class="p">)</span>\
      <span class="p">.</span><span class="n">setInputCols</span><span class="p">([</span><span class="s">"document"</span><span class="p">,</span><span class="s">"token"</span><span class="p">])</span>\
      <span class="p">.</span><span class="n">setOutputCol</span><span class="p">(</span><span class="s">"class"</span><span class="p">)</span>
 
 <span class="n">example_text</span> <span class="o">=</span> <span class="p">[</span><span class="s">"Do what makes you happy, be with who makes you smile, laugh as much as you breathe, and love as long as you live!"</span><span class="p">,</span>
                 <span class="s">"Everything is a lie, everyone is fake, I'm so tired of living"</span><span class="p">]</span>
-</code></pre></div></div>
+</code></pre></div>  </div>
 
-<p><em>Results</em> :</p>
+  <p><em>Results</em> :</p>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>+------------------------------------------------------------------------------------------------------------------+---------------+
+  <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>+------------------------------------------------------------------------------------------------------------------+---------------+
  |text                                                                                                             |result         |
  +-----------------------------------------------------------------------------------------------------------------+---------------+
  |Do what makes you happy, be with <span class="nb">who </span>makes you smile, laugh as much as you breathe, and love as long as you live!|[no-depression]|
  |Everything is a lie, everyone is fake, I am so tired of living.                                                  |[depression]   |
  +-----------------------------------------------------------------------------------------------------------------+---------------+
-</code></pre></div></div>
+</code></pre></div>  </div>
 
-<h4 id="new-pretrained-chunk-mapper-model-drug_ade_mapper-to-map-drugs-with-their-corresponding-adverse-drug-events">New Pretrained Chunk Mapper Model (<code class="language-plaintext highlighter-rouge">drug_ade_mapper</code>) to Map Drugs With Their Corresponding Adverse Drug Events</h4>
+</div>
+<div class="h3-box">
 
-<p>We are releasing new <code class="language-plaintext highlighter-rouge">drug_ade_mapper</code> pretrained chunk mapper model to map drugs with their corresponding adverse drug events.</p>
+  <h4 id="new-pretrained-chunk-mapper-model-drugademapper-to-map-drugs-with-their-corresponding-adverse-drug-events">New Pretrained Chunk Mapper Model (<code class="language-plaintext highlighter-rouge">drug_ade_mapper</code>) to Map Drugs With Their Corresponding Adverse Drug Events</h4>
 
-<p>See <a href="https://nlp.johnsnowlabs.com/2022/08/23/drug_ade_mapper_en.html">Models Hub Page</a> for more details.</p>
+  <p>We are releasing new <code class="language-plaintext highlighter-rouge">drug_ade_mapper</code> pretrained chunk mapper model to map drugs with their corresponding adverse drug events.</p>
 
-<p><em>Example</em> :</p>
+  <p>See <a href="https://nlp.johnsnowlabs.com/2022/08/23/drug_ade_mapper_en.html">Models Hub Page</a> for more details.</p>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">...</span>
+  <p><em>Example</em> :</p>
+
+  <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">...</span>
 <span class="n">chunkMapper</span> <span class="o">=</span> <span class="n">ChunkMapperModel</span><span class="p">.</span><span class="n">pretrained</span><span class="p">(</span><span class="s">"drug_ade_mapper"</span><span class="p">,</span> <span class="s">"en"</span><span class="p">,</span> <span class="s">"clinical/models"</span><span class="p">)</span>\
       <span class="p">.</span><span class="n">setInputCols</span><span class="p">([</span><span class="s">"ner_chunk"</span><span class="p">])</span>\
       <span class="p">.</span><span class="n">setOutputCol</span><span class="p">(</span><span class="s">"mappings"</span><span class="p">)</span>\
@@ -767,11 +781,11 @@
 <span class="p">...</span>
 
 <span class="n">sample_text</span> <span class="o">=</span> <span class="s">"The patient was prescribed 1000 mg fish oil and multivitamins. She was discharged on zopiclone and ambrisentan."</span>
-</code></pre></div></div>
+</code></pre></div>  </div>
 
-<p><em>Results</em> :</p>
+  <p><em>Results</em> :</p>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>+----------------+------------+-------------------------------------------------------------------------------------------+
+  <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>+----------------+------------+-------------------------------------------------------------------------------------------+
 |ner_chunk       |ade_mappings|all_relations                                                                              |
 +----------------+------------+-------------------------------------------------------------------------------------------+
 |1000 mg fish oil|Dizziness   |Myocardial infarction:::Nausea                                                             |
@@ -779,19 +793,22 @@
 |zopiclone       |Vomiting    |Malaise:::Drug interaction:::Asthenia:::Hyponatraemia                                      |
 |ambrisentan     |Dyspnoea    |Therapy interrupted:::Death:::Dizziness:::Drug ineffective                                 |
 +----------------+------------+-------------------------------------------------------------------------------------------+
-</code></pre></div></div>
+</code></pre></div>  </div>
 
-<h4 id="a-new-pretrained-resolver-pipeline-medication_resolver_pipeline-to-extract-medications-and-resolve-their-adverse-reactions-ade-rxnorm-umls-ndc-snomed-ct-codes-and-actiontreatments-in-clinical-text">A New Pretrained Resolver Pipeline (<code class="language-plaintext highlighter-rouge">medication_resolver_pipeline</code>) to Extract Medications and Resolve Their Adverse Reactions (ADE), RxNorm, UMLS, NDC, SNOMED CT Codes and Action/Treatments in Clinical Text.</h4>
+</div>
+<div class="h3-box">
 
-<p>We are releasing the <code class="language-plaintext highlighter-rouge">medication_resolver_pipeline</code> pretrained pipeline to extract medications and resolve their adverse reactions (ADE), RxNorm, UMLS, NDC, SNOMED CT codes and action/treatments in clinical text with a single line of code.</p>
+  <h4 id="a-new-pretrained-resolver-pipeline-medicationresolverpipeline-to-extract-medications-and-resolve-their-adverse-reactions-ade-rxnorm-umls-ndc-snomed-ct-codes-and-actiontreatments-in-clinical-text">A New Pretrained Resolver Pipeline (<code class="language-plaintext highlighter-rouge">medication_resolver_pipeline</code>) to Extract Medications and Resolve Their Adverse Reactions (ADE), RxNorm, UMLS, NDC, SNOMED CT Codes and Action/Treatments in Clinical Text.</h4>
 
-<p>Also, you can use <code class="language-plaintext highlighter-rouge">medication_resolver_transform_pipeline</code> to use transform method of Spark.</p>
+  <p>We are releasing the <code class="language-plaintext highlighter-rouge">medication_resolver_pipeline</code> pretrained pipeline to extract medications and resolve their adverse reactions (ADE), RxNorm, UMLS, NDC, SNOMED CT codes and action/treatments in clinical text with a single line of code.</p>
 
-<p>See <a href="https://nlp.johnsnowlabs.com/2022/09/01/medication_resolver_pipeline_en.html">Models Hub Page</a> for more details.</p>
+  <p>Also, you can use <code class="language-plaintext highlighter-rouge">medication_resolver_transform_pipeline</code> to use transform method of Spark.</p>
 
-<p><em>Example</em> :</p>
+  <p>See <a href="https://nlp.johnsnowlabs.com/2022/09/01/medication_resolver_pipeline_en.html">Models Hub Page</a> for more details.</p>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">sparknlp.pretrained</span> <span class="kn">import</span> <span class="n">PretrainedPipeline</span>
+  <p><em>Example</em> :</p>
+
+  <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">sparknlp.pretrained</span> <span class="kn">import</span> <span class="n">PretrainedPipeline</span>
 
 <span class="n">sample_text</span> <span class="o">=</span> <span class="s">"""The patient was prescribed Amlodopine Vallarta 10-320mg, Eviplera.
                  The other patient is given Lescol 40 MG and Everolimus 1.5 mg tablet."""</span>
@@ -801,87 +818,100 @@
 
 <span class="n">med_transform_pipeline</span> <span class="o">=</span> <span class="n">PretrainedPipeline</span><span class="p">(</span><span class="s">"medication_resolver_transform_pipeline"</span><span class="p">,</span> <span class="s">"en"</span><span class="p">,</span> <span class="s">"clinical/models"</span><span class="p">)</span>
 <span class="n">med_transform_pipeline</span><span class="p">.</span><span class="n">transform</span><span class="p">(</span><span class="n">spark</span><span class="p">.</span><span class="n">createDataFrame</span><span class="p">([[</span><span class="n">sample_text</span><span class="p">]]).</span><span class="n">toDF</span><span class="p">(</span><span class="s">"text"</span><span class="p">))</span>
-</code></pre></div></div>
+</code></pre></div>  </div>
 
-<p><em>Results</em> :</p>
+  <p><em>Results</em> :</p>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>| chunk                        | ner_label   | ADE                         |   RxNorm | Action                     | Treatment                                  | UMLS     | SNOMED_CT   | NDC_Product   | NDC_Package   |
+  <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>| chunk                        | ner_label   | ADE                         |   RxNorm | Action                     | Treatment                                  | UMLS     | SNOMED_CT   | NDC_Product   | NDC_Package   |
 |:-----------------------------|:------------|:----------------------------|---------:|:---------------------------|:-------------------------------------------|:---------|:------------|:--------------|:--------------|
 | Amlodopine Vallarta 10-320mg | DRUG        | Gynaecomastia               |   722131 | NONE                       | NONE                                       | C1949334 | 425838008   | 00093-7693    | 00093-7693-56 |
 | Eviplera                     | DRUG        | Anxiety                     |   217010 | Inhibitory Bone Resorption | Osteoporosis                               | C0720318 | NONE        | NONE          | NONE          |
 | Lescol 40 MG                 | DRUG        | NONE                        |   103919 | Hypocholesterolemic        | Heterozygous Familial Hypercholesterolemia | C0353573 | NONE        | 00078-0234    | 00078-0234-05 |
 | Everolimus 1.5 mg tablet     | DRUG        | Acute myocardial infarction |  2056895 | NONE                       | NONE                                       | C4723581 | NONE        | 00054-0604    | 00054-0604-21 |
-</code></pre></div></div>
+</code></pre></div>  </div>
 
-<h4 id="updated-ner-profiling-pretrained-pipelines-with-new-ner-models-to-allow-running-64-clinical-ner-models-at-once">Updated NER Profiling Pretrained Pipelines With New NER Models to Allow Running 64 Clinical NER Models at Once</h4>
+</div>
+<div class="h3-box">
 
-<p>We have upadated <code class="language-plaintext highlighter-rouge">ner_profiling_clinical</code> and <code class="language-plaintext highlighter-rouge">ner_profiling_biobert</code> pretrained pipelines with the new NER models. When you run these pipelines over your text, now you will end up with the predictions coming out of <strong>64 clinical NER models in <code class="language-plaintext highlighter-rouge">ner_profiling_clinical</code></strong> and <strong>22 clinical NER models in <code class="language-plaintext highlighter-rouge">ner_profiling_biobert</code></strong> results.</p>
+  <h4 id="updated-ner-profiling-pretrained-pipelines-with-new-ner-models-to-allow-running-64-clinical-ner-models-at-once">Updated NER Profiling Pretrained Pipelines With New NER Models to Allow Running 64 Clinical NER Models at Once</h4>
 
-<p>You can check <a href="https://nlp.johnsnowlabs.com/2022/08/30/ner_profiling_clinical_en.html">ner_profiling_clinical</a> and <a href="https://nlp.johnsnowlabs.com/2022/08/28/ner_profiling_biobert_en.html">ner_profiling_biobert</a> Models Hub pages for more details and the NER model lists that these pipelines include.</p>
+  <p>We have upadated <code class="language-plaintext highlighter-rouge">ner_profiling_clinical</code> and <code class="language-plaintext highlighter-rouge">ner_profiling_biobert</code> pretrained pipelines with the new NER models. When you run these pipelines over your text, now you will end up with the predictions coming out of <strong>64 clinical NER models in <code class="language-plaintext highlighter-rouge">ner_profiling_clinical</code></strong> and <strong>22 clinical NER models in <code class="language-plaintext highlighter-rouge">ner_profiling_biobert</code></strong> results.</p>
 
-<h4 id="core-improvements-and-bug-fixes">Core Improvements and Bug Fixes</h4>
+  <p>You can check <a href="https://nlp.johnsnowlabs.com/2022/08/30/ner_profiling_clinical_en.html">ner_profiling_clinical</a> and <a href="https://nlp.johnsnowlabs.com/2022/08/28/ner_profiling_biobert_en.html">ner_profiling_biobert</a> Models Hub pages for more details and the NER model lists that these pipelines include.</p>
 
-<ul>
-  <li>Updated HCC module (<code class="language-plaintext highlighter-rouge">from sparknlp_jsl.functions import profile</code>) with the new changes in HCC score calculation functions.</li>
-  <li><code class="language-plaintext highlighter-rouge">AnnotationToolJsonReader</code>, <code class="language-plaintext highlighter-rouge">NerDLMetrics</code> and <code class="language-plaintext highlighter-rouge">StructuredDeidentification</code>: These annotators can be used on Spark 3.0 now.</li>
-  <li><code class="language-plaintext highlighter-rouge">NerDLMetrics</code>:
-    <ul>
-      <li>Added <code class="language-plaintext highlighter-rouge">case_sensitive</code> parameter and case sensitivity issue in tokens is solved.</li>
-      <li>Added <code class="language-plaintext highlighter-rouge">drop_o</code> parameter to <code class="language-plaintext highlighter-rouge">computeMetricsFromDF</code> method and <code class="language-plaintext highlighter-rouge">dropO</code> parameter in <code class="language-plaintext highlighter-rouge">NerDLMetrics</code> class is <strong>deprecated</strong>.</li>
-    </ul>
-  </li>
-  <li><code class="language-plaintext highlighter-rouge">MedicalNerModel</code>: Inconsistent NER model results between different versions issue is solved.</li>
-  <li><code class="language-plaintext highlighter-rouge">AssertionDLModel</code>: Unindexed chunks will be ignored by the <code class="language-plaintext highlighter-rouge">AssertionDLModel</code> instead of raising an exception.</li>
-  <li><code class="language-plaintext highlighter-rouge">ContextualParserApproach</code>: These two issues are solved when using <code class="language-plaintext highlighter-rouge">ruleScope: "document"</code> configuration:
-    <ul>
-      <li>Wrong index computations of chunks after matching sub-tokens.</li>
-      <li>Including sub-token matches even though <code class="language-plaintext highlighter-rouge">completeMatchRegex: "true"</code>.</li>
-    </ul>
-  </li>
-</ul>
+</div>
+<div class="h3-box">
 
-<h4 id="new-and-updated-notebooks">New and Updated Notebooks</h4>
+  <h4 id="core-improvements-and-bug-fixes">Core Improvements and Bug Fixes</h4>
 
-<ul>
-  <li>We have a new <a href="https://github.com/JohnSnowLabs/spark-nlp-workshop/blob/master/tutorials/Certification_Trainings/Healthcare/1.6.ZeroShot_Clinical_NER.ipynb">Zero-Shot Clinical NER Notebook</a> to show how to use zero-shot NER model.</li>
-  <li>We have updated <a href="https://github.com/JohnSnowLabs/spark-nlp-workshop/blob/master/tutorials/Certification_Trainings/Healthcare/3.1.Calculate_Medicare_Risk_Adjustment_Score.ipynb">Medicare Risk Adjustment Score Calculation Notebook</a> with the new changes in HCC score calculation functions.</li>
-  <li>We have updated these notebooks with the new updates in NER profiling pretrained pipelines:
-    <ul>
-      <li><a href="https://github.com/JohnSnowLabs/spark-nlp-workshop/blob/master/tutorials/Certification_Trainings/Healthcare/1.Clinical_Named_Entity_Recognition_Model.ipynb">Clinical Named Entity Recognition Model Notebook</a></li>
-      <li><a href="https://github.com/JohnSnowLabs/spark-nlp-workshop/blob/master/tutorials/Certification_Trainings/Healthcare/11.Pretrained_Clinical_Pipelines.ipynb">Pretrained Clinical Pipelines Notebook</a></li>
-      <li><a href="https://github.com/JohnSnowLabs/spark-nlp-workshop/blob/master/tutorials/Certification_Trainings/Healthcare/11.2.Pretrained_NER_Profiling_Pipelines.ipynb">Pretrained NER Profiling Pipelines Notebook</a></li>
-    </ul>
-  </li>
-  <li>We have updated <a href="https://github.com/JohnSnowLabs/spark-nlp-workshop/blob/master/tutorials/Certification_Trainings/Healthcare/2.Clinical_Assertion_Model.ipynb">Clinical Assertion Model Notebook</a> according to the bug fix in the training section.</li>
-  <li>We moved all Azure/AWS/Databricks notebooks to <code class="language-plaintext highlighter-rouge">products</code> folder in <a href="https://github.com/JohnSnowLabs/spark-nlp-workshop/tree/master/products">spark-nlp-worksop</a> repo.</li>
-</ul>
+  <ul>
+    <li>Updated HCC module (<code class="language-plaintext highlighter-rouge">from sparknlp_jsl.functions import profile</code>) with the new changes in HCC score calculation functions.</li>
+    <li><code class="language-plaintext highlighter-rouge">AnnotationToolJsonReader</code>, <code class="language-plaintext highlighter-rouge">NerDLMetrics</code> and <code class="language-plaintext highlighter-rouge">StructuredDeidentification</code>: These annotators can be used on Spark 3.0 now.</li>
+    <li><code class="language-plaintext highlighter-rouge">NerDLMetrics</code>:
+      <ul>
+        <li>Added <code class="language-plaintext highlighter-rouge">case_sensitive</code> parameter and case sensitivity issue in tokens is solved.</li>
+        <li>Added <code class="language-plaintext highlighter-rouge">drop_o</code> parameter to <code class="language-plaintext highlighter-rouge">computeMetricsFromDF</code> method and <code class="language-plaintext highlighter-rouge">dropO</code> parameter in <code class="language-plaintext highlighter-rouge">NerDLMetrics</code> class is <strong>deprecated</strong>.</li>
+      </ul>
+    </li>
+    <li><code class="language-plaintext highlighter-rouge">MedicalNerModel</code>: Inconsistent NER model results between different versions issue is solved.</li>
+    <li><code class="language-plaintext highlighter-rouge">AssertionDLModel</code>: Unindexed chunks will be ignored by the <code class="language-plaintext highlighter-rouge">AssertionDLModel</code> instead of raising an exception.</li>
+    <li><code class="language-plaintext highlighter-rouge">ContextualParserApproach</code>: These two issues are solved when using <code class="language-plaintext highlighter-rouge">ruleScope: "document"</code> configuration:
+      <ul>
+        <li>Wrong index computations of chunks after matching sub-tokens.</li>
+        <li>Including sub-token matches even though <code class="language-plaintext highlighter-rouge">completeMatchRegex: "true"</code>.</li>
+      </ul>
+    </li>
+  </ul>
 
-<h4 id="20-new-clinical-models-and-pipelines-added--updated-in-total">20+ New Clinical Models and Pipelines Added &amp; Updated in Total</h4>
+</div>
+<div class="h3-box">
 
-<ul>
-  <li><code class="language-plaintext highlighter-rouge">zero_shot_ner_roberta</code></li>
-  <li><code class="language-plaintext highlighter-rouge">medication_resolver_pipeline</code></li>
-  <li><code class="language-plaintext highlighter-rouge">medication_resolver_transform_pipeline</code></li>
-  <li><code class="language-plaintext highlighter-rouge">ner_profiling_clinical</code></li>
-  <li><code class="language-plaintext highlighter-rouge">ner_profiling_biobert</code></li>
-  <li><code class="language-plaintext highlighter-rouge">drug_ade_mapper</code></li>
-  <li><code class="language-plaintext highlighter-rouge">ner_negation_uncertainty</code></li>
-  <li><code class="language-plaintext highlighter-rouge">disease_mentions_tweet</code></li>
-  <li><code class="language-plaintext highlighter-rouge">ner_clinical_trials_abstracts</code></li>
-  <li><code class="language-plaintext highlighter-rouge">ner_pharmacology</code></li>
-  <li><code class="language-plaintext highlighter-rouge">bert_token_classifier_ner_clinical_trials_abstracts</code></li>
-  <li><code class="language-plaintext highlighter-rouge">bert_token_classifier_negation_uncertainty</code></li>
-  <li><code class="language-plaintext highlighter-rouge">bert_token_classifier_pharmacology</code></li>
-  <li><code class="language-plaintext highlighter-rouge">bert_sequence_classifier_depression_binary</code></li>
-  <li><code class="language-plaintext highlighter-rouge">bert_sequence_classifier_health_mentions_gbert_large</code></li>
-  <li><code class="language-plaintext highlighter-rouge">bert_sequence_classifier_health_mentions_medbert</code></li>
-  <li><code class="language-plaintext highlighter-rouge">bert_sequence_classifier_health_mentions_gbert</code></li>
-  <li><code class="language-plaintext highlighter-rouge">bert_sequence_classifier_health_mentions_bert</code></li>
-  <li><code class="language-plaintext highlighter-rouge">bert_sequence_classifier_depression_twitter</code></li>
-  <li><code class="language-plaintext highlighter-rouge">bert_sequence_classifier_depression</code></li>
-  <li><code class="language-plaintext highlighter-rouge">bert_sequence_classifier_covid_sentiment</code></li>
-</ul>
+  <h4 id="new-and-updated-notebooks">New and Updated Notebooks</h4>
 
+  <ul>
+    <li>We have a new <a href="https://github.com/JohnSnowLabs/spark-nlp-workshop/blob/master/tutorials/Certification_Trainings/Healthcare/1.6.ZeroShot_Clinical_NER.ipynb">Zero-Shot Clinical NER Notebook</a> to show how to use zero-shot NER model.</li>
+    <li>We have updated <a href="https://github.com/JohnSnowLabs/spark-nlp-workshop/blob/master/tutorials/Certification_Trainings/Healthcare/3.1.Calculate_Medicare_Risk_Adjustment_Score.ipynb">Medicare Risk Adjustment Score Calculation Notebook</a> with the new changes in HCC score calculation functions.</li>
+    <li>We have updated these notebooks with the new updates in NER profiling pretrained pipelines:
+      <ul>
+        <li><a href="https://github.com/JohnSnowLabs/spark-nlp-workshop/blob/master/tutorials/Certification_Trainings/Healthcare/1.Clinical_Named_Entity_Recognition_Model.ipynb">Clinical Named Entity Recognition Model Notebook</a></li>
+        <li><a href="https://github.com/JohnSnowLabs/spark-nlp-workshop/blob/master/tutorials/Certification_Trainings/Healthcare/11.Pretrained_Clinical_Pipelines.ipynb">Pretrained Clinical Pipelines Notebook</a></li>
+        <li><a href="https://github.com/JohnSnowLabs/spark-nlp-workshop/blob/master/tutorials/Certification_Trainings/Healthcare/11.2.Pretrained_NER_Profiling_Pipelines.ipynb">Pretrained NER Profiling Pipelines Notebook</a></li>
+      </ul>
+    </li>
+    <li>We have updated <a href="https://github.com/JohnSnowLabs/spark-nlp-workshop/blob/master/tutorials/Certification_Trainings/Healthcare/2.Clinical_Assertion_Model.ipynb">Clinical Assertion Model Notebook</a> according to the bug fix in the training section.</li>
+    <li>We moved all Azure/AWS/Databricks notebooks to <code class="language-plaintext highlighter-rouge">products</code> folder in <a href="https://github.com/JohnSnowLabs/spark-nlp-workshop/tree/master/products">spark-nlp-worksop</a> repo.</li>
+  </ul>
+
+</div>
+<div class="h3-box">
+
+  <h4 id="new-clinical-models-and-pipelines-added--updated-in-total">20+ New Clinical Models and Pipelines Added &amp; Updated in Total</h4>
+
+  <ul>
+    <li><code class="language-plaintext highlighter-rouge">zero_shot_ner_roberta</code></li>
+    <li><code class="language-plaintext highlighter-rouge">medication_resolver_pipeline</code></li>
+    <li><code class="language-plaintext highlighter-rouge">medication_resolver_transform_pipeline</code></li>
+    <li><code class="language-plaintext highlighter-rouge">ner_profiling_clinical</code></li>
+    <li><code class="language-plaintext highlighter-rouge">ner_profiling_biobert</code></li>
+    <li><code class="language-plaintext highlighter-rouge">drug_ade_mapper</code></li>
+    <li><code class="language-plaintext highlighter-rouge">ner_negation_uncertainty</code></li>
+    <li><code class="language-plaintext highlighter-rouge">disease_mentions_tweet</code></li>
+    <li><code class="language-plaintext highlighter-rouge">ner_clinical_trials_abstracts</code></li>
+    <li><code class="language-plaintext highlighter-rouge">ner_pharmacology</code></li>
+    <li><code class="language-plaintext highlighter-rouge">bert_token_classifier_ner_clinical_trials_abstracts</code></li>
+    <li><code class="language-plaintext highlighter-rouge">bert_token_classifier_negation_uncertainty</code></li>
+    <li><code class="language-plaintext highlighter-rouge">bert_token_classifier_pharmacology</code></li>
+    <li><code class="language-plaintext highlighter-rouge">bert_sequence_classifier_depression_binary</code></li>
+    <li><code class="language-plaintext highlighter-rouge">bert_sequence_classifier_health_mentions_gbert_large</code></li>
+    <li><code class="language-plaintext highlighter-rouge">bert_sequence_classifier_health_mentions_medbert</code></li>
+    <li><code class="language-plaintext highlighter-rouge">bert_sequence_classifier_health_mentions_gbert</code></li>
+    <li><code class="language-plaintext highlighter-rouge">bert_sequence_classifier_health_mentions_bert</code></li>
+    <li><code class="language-plaintext highlighter-rouge">bert_sequence_classifier_depression_twitter</code></li>
+    <li><code class="language-plaintext highlighter-rouge">bert_sequence_classifier_depression</code></li>
+    <li><code class="language-plaintext highlighter-rouge">bert_sequence_classifier_covid_sentiment</code></li>
+  </ul>
+
+</div>
 <div class="prev_ver h3-box">
 
   <h2 id="versions">Versions</h2>
@@ -895,9 +925,12 @@
     <li>
         <strong>Version 4.1.0</strong>
     </li>
+    <li>
+        <a href="release_notes_4_2_0">Version 4.2.0</a>
+    </li>
 </ul>
-
 <ul class="pagination owl-carousel pagination_big">
+    <li><a href="release_notes_4_2_0">4.2.0</a></li>
     <li class="active"><a href="release_notes_4_1_0">4.1.0</a></li>
     <li><a href="release_notes_4_0_2">4.0.2</a></li>
     <li><a href="release_notes_4_0_0">4.0.0</a></li>
@@ -1029,7 +1062,7 @@ if(document.querySelectorAll('.tab-li-second')) {
             e.preventDefault();
             let tabAttribute = element.getAttribute('data-type'),
                 tabLiInner = element.parentNode.querySelectorAll('.tab-li-second'),
-                tabBoxInner = element.parentNode.parentNode.querySelectorAll('.tabs-box-medic-inner');
+                tabBoxInner = element.parentNode.parentNode.parentNode.querySelectorAll('.tabs-box-medic-inner');
             
             //remove active class
             tabBoxInner.forEach(item => {
@@ -1064,14 +1097,30 @@ if(document.querySelectorAll('.tab-li-second')) {
 
 //Third tabs
 if(document.querySelectorAll('.tab-li-inner')) {
-    let tabLiSecond = document.querySelectorAll('.tab-li-inner');
+
+
+
+    let tabLiSecond = document.querySelectorAll('.tab-li-inner'),
+        tabLiTop = document.querySelectorAll('.toptab-second'),
+        tabLi = document.querySelectorAll('.toptab-second p');
+
+        console.log(tabLiTop);
+
+    tabLiTop.forEach(e => {        
+        e.nextElementSibling.classList.add('active');
+    });
+
+    tabLi.forEach(e => {        
+        e.firstChild.classList.add('active');
+    });
+
 
     tabLiSecond.forEach(element => {
         element.addEventListener('click', function(e) {
             e.preventDefault();
             let tabAttributeSecond = element.getAttribute('data-type'),
                 tabLiInnerSecond = element.parentNode.querySelectorAll('.tab-li-inner'),
-                tabBoxInnerSecond = element.parentNode.parentNode.querySelectorAll('.tabs-box-medic-inner-second');
+                tabBoxInnerSecond = element.parentNode.parentNode.parentNode.querySelectorAll('.tabs-box-medic-inner-second');
             
             //remove active class
             tabBoxInnerSecond.forEach(item => {
@@ -1161,7 +1210,7 @@ hr.code-selector-underlie {
 
 }
 
-</style><div class="article__section-navigator clearfix"><div class="previous nav_link"><span>PREVIOUS</span><a href="/docs/en/best_practices_pretrained_models">Best Practices Using Pretrained Models Together</a></div></div></div>
+</style><div class="article__section-navigator clearfix"><div class="previous nav_link"><span>PREVIOUS</span><a href="/docs/en/wiki">Wiki</a></div></div></div>
 
 </div>
 </div>
@@ -1566,8 +1615,10 @@ if(document.querySelector('.btn.disable')) {
   window.Lazyload.js(SOURCES.jquery, function() {
     function toc(options) {
       var $root = this, $window = $(window), $scrollTarget, $scroller, $tocUl = $('<ul class="toc toc--ellipsis"></ul>'), $tocLi, $headings, $activeLast, $activeCur,
-        selectors = 'h1,h2,h3', container = 'body', scrollTarget = window, scroller = 'html, body', disabled = false,
+        selectors = 'h1,h2,h3',  container = 'body', scrollTarget = window, scroller = 'html, body', disabled = false,
         headingsPos, scrolling = false, hasRendered = false, hasInit = false;
+
+        
 
       function setOptions(options) {
         var _options = options || {};
@@ -1609,7 +1660,8 @@ if(document.querySelector('.btn.disable')) {
           $root.append($tocUl);
           $headings.each(function() {
             var $this = $(this);
-            $tocUl.append($('<li></li>').addClass('toc-' + $this.prop('tagName').toLowerCase())
+            $tocUl.append($('<li></li>').addClass('toc-' + $this.prop('tagName')
+              .toLowerCase() + ' ' + $this.prop('className'))
               .append($('<a></a>').text($this.text()).attr('href', '#' + $this.prop('id'))));
           });
           $tocLi = $tocUl.children('li');
