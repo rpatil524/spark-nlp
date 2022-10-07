@@ -1,2 +1,4 @@
-docs/en/alab/project_setup.md
-docs/en/alab/project_setup.md
+docs/_posts/Meryem1425/2022-07-28-bert_sequence_classifier_treatement_changes_sentiment_tweet_en_3_0.md
+docs/_posts/luca-martial/2022-07-07-clinical_deidentification_wip_en_3_2.md
+docs/_posts/Meryem1425/2022-07-28-bert_sequence_classifier_treatement_changes_sentiment_tweet_en_3_0.md
+docs/_posts/luca-martial/2022-07-07-clinical_deidentification_wip_en_3_2.md
