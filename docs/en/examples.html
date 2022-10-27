@@ -423,7 +423,7 @@
 <span class="c"># should be Java 8 (Oracle or OpenJDK)</span>
 <span class="nv">$ </span>conda create <span class="nt">-n</span> sparknlp <span class="nv">python</span><span class="o">=</span>3.7 <span class="nt">-y</span>
 <span class="nv">$ </span>conda activate sparknlp
-<span class="nv">$ </span>pip <span class="nb">install </span>spark-nlp<span class="o">==</span>4.2.0 <span class="nv">pyspark</span><span class="o">==</span>3.2.1
+<span class="nv">$ </span>pip <span class="nb">install </span>spark-nlp<span class="o">==</span>4.2.1 <span class="nv">pyspark</span><span class="o">==</span>3.2.1
 </code></pre></div></div>
 
 <h2 id="google-colab-notebook">Google Colab Notebook</h2>
@@ -441,7 +441,7 @@
 <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># -p is for pyspark</span>
 <span class="c"># -s is for spark-nlp</span>
 <span class="c"># by default they are set to the latest</span>
-<span class="o">!</span>bash colab.sh <span class="nt">-p</span> 3.2.1 <span class="nt">-s</span> 4.2.0
+<span class="o">!</span>bash colab.sh <span class="nt">-p</span> 3.2.1 <span class="nt">-s</span> 4.2.1
 </code></pre></div></div>
 
 <p><a href="https://colab.research.google.com/github/JohnSnowLabs/spark-nlp-workshop/blob/master/jupyter/quick_start_google_colab.ipynb">Spark NLP quick start on Google Colab</a> is a live demo on Google Colab that performs named entity recognitions and sentiment analysis by using Spark NLP pretrained pipelines.</p>
@@ -538,11 +538,20 @@ defer(function () { // load inital language
 
 if((document.querySelectorAll('.model-wrap').length !== 0) || (document.querySelectorAll('.tabs-new').length !== 0)) {
 
-    let tabLi = document.querySelectorAll('.tabs-new .tab-li'),
-        tabLiTopF = document.querySelectorAll('.top_tab_li');
+    let tabLi = document.querySelectorAll('.tabs-new .tab-li');
+
+    if((document.querySelectorAll('.model-wrap').length !== 0)) {
+        tabLi = document.querySelectorAll('.model-wrap .tab-li');
+    } 
+    
+    let tabLiTopF = document.querySelectorAll('.top_tab_li'),
+        pythonInner = document.querySelectorAll('.python-inner');
 
     tabLiTopF.forEach(e => {        
         e.nextElementSibling.classList.add('active');
+    });
+    pythonInner.forEach(e => {
+        e.firstElementChild.classList.remove('language-python');
     });
 
     tabLi.forEach(element => {
@@ -552,7 +561,7 @@ if((document.querySelectorAll('.model-wrap').length !== 0) || (document.querySel
                 tabLiInner = element.parentNode.querySelectorAll('.tab-li'),
                 tabBoxInner = element.parentNode.parentNode.parentNode.querySelectorAll('.highlighter-rouge');
             
-            //remove active class
+            //remove active class from NLU
             tabBoxInner.forEach(item => {
                 item.classList.remove('active');
                 if(item.classList.contains('nlu-block')) {
@@ -694,6 +703,49 @@ if(document.querySelectorAll('.tab-li-inner').length !== 0) {
                     }                    
                 });
                 break;
+                default:              
+              }
+        });
+    });
+}
+
+//Forth tabs
+if(document.querySelectorAll('.tab-jsl').length !== 0) {
+    let tabLiForth = document.querySelectorAll('.tab-jsl');
+
+    tabLiForth.forEach(element => {
+        element.addEventListener('click', function(e) {
+            e.preventDefault();
+            let tabAttribute = element.getAttribute('data-type'),
+                tabLiInner = element.parentNode.querySelectorAll('.tab-jsl'),
+                tabBoxInner = element.parentNode.parentNode.parentNode.querySelectorAll('.python-inner');
+            
+
+            //remove active class
+            tabBoxInner.forEach(item => {
+                item.classList.remove('active');
+            });
+            tabLiInner.forEach(el => {
+                el.classList.remove('active');
+            });
+            element.classList.add('active');
+    
+            //add active class
+            switch (tabAttribute) {
+                case "spark-nlp-jsl":
+                    tabBoxInner.forEach(item => {
+                        if(item.classList.contains('python-johnsnowlabs')) {
+                            item.classList.add('active');
+                        }                    
+                    });
+                    break;
+                case "johnsnowlabs":
+                    tabBoxInner.forEach(item => {
+                        if(item.classList.contains('python-spark-nlp-jsl')) {
+                            item.classList.add('active');
+                        }                    
+                    });
+                  break;
                 default:              
               }
         });

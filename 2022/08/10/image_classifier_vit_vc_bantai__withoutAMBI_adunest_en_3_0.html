@@ -11,7 +11,7 @@
     })(window,document,'script','dataLayer','GTM-59JLR64');</script>
 <!-- End Google Tag Manager --><title>English image_classifier_vit_vc_bantai__withoutAMBI_adunest ViTForImageClassification from AykeeSalazar</title><meta property="og:title" content=""/>
 
-<meta name="description" content="DescriptionPretrained VIT  model, adapted from Hugging Face and curated to provide scalability and production-readiness using Spark NLP.image_classifier_vit_vc_bantai__withoutAMBI_adunest is a English model originally trained by AykeeSalazar.Live DemoOpen in ColabDownloadHow to use         PythonScalaNLU  image_asse...">
+<meta name="description" content="DescriptionPretrained VIT  model, adapted from Hugging Face and curated to provide scalability and production-readiness using Spark NLP.image_classifier_vit_vc_bantai__withoutAMBI_adunest is a English model originally trained by AykeeSalazar.Predicted EntitiesPublic Drinking, Public Smoking, non-violationLive DemoOp...">
 <link rel="canonical" href="/2022/08/10/image_classifier_vit_vc_bantai__withoutAMBI_adunest_en_3_0.html"><link rel="alternate" type="application/rss+xml" title="Spark NLP" href="/feed.xml"><!-- start favicons snippet, use https://realfavicongenerator.net/ -->
 <!---->
 <!-- <link rel="apple-touch-icon" sizes="180x180" href="/fav.ico"> -->
@@ -421,6 +421,10 @@
 
 <p>Pretrained VIT  model, adapted from Hugging Face and curated to provide scalability and production-readiness using Spark NLP.<code class="language-plaintext highlighter-rouge">image_classifier_vit_vc_bantai__withoutAMBI_adunest</code> is a English model originally trained by AykeeSalazar.</p>
 
+<h2 id="predicted-entities">Predicted Entities</h2>
+
+<p><code class="language-plaintext highlighter-rouge">Public Drinking</code>, <code class="language-plaintext highlighter-rouge">Public Smoking</code>, <code class="language-plaintext highlighter-rouge">non-violation</code></p>
+
 <p class="btn-box"><button class="button button-orange" disabled="">Live Demo</button>
 <button class="button button-orange" disabled="">Open in Colab</button>
 <a href="https://s3.amazonaws.com/auxdata.johnsnowlabs.com/public/models/image_classifier_vit_vc_bantai__withoutAMBI_adunest_en_4.1.0_3.0_1660166079256.zip" class="button button-orange button-orange-trans arr button-icon">Download</a></p>
@@ -582,11 +586,20 @@ defer(function () { // load inital language
 
 if((document.querySelectorAll('.model-wrap').length !== 0) || (document.querySelectorAll('.tabs-new').length !== 0)) {
 
-    let tabLi = document.querySelectorAll('.tabs-new .tab-li'),
-        tabLiTopF = document.querySelectorAll('.top_tab_li');
+    let tabLi = document.querySelectorAll('.tabs-new .tab-li');
+
+    if((document.querySelectorAll('.model-wrap').length !== 0)) {
+        tabLi = document.querySelectorAll('.model-wrap .tab-li');
+    } 
+    
+    let tabLiTopF = document.querySelectorAll('.top_tab_li'),
+        pythonInner = document.querySelectorAll('.python-inner');
 
     tabLiTopF.forEach(e => {        
         e.nextElementSibling.classList.add('active');
+    });
+    pythonInner.forEach(e => {
+        e.firstElementChild.classList.remove('language-python');
     });
 
     tabLi.forEach(element => {
@@ -596,7 +609,7 @@ if((document.querySelectorAll('.model-wrap').length !== 0) || (document.querySel
                 tabLiInner = element.parentNode.querySelectorAll('.tab-li'),
                 tabBoxInner = element.parentNode.parentNode.parentNode.querySelectorAll('.highlighter-rouge');
             
-            //remove active class
+            //remove active class from NLU
             tabBoxInner.forEach(item => {
                 item.classList.remove('active');
                 if(item.classList.contains('nlu-block')) {
@@ -738,6 +751,49 @@ if(document.querySelectorAll('.tab-li-inner').length !== 0) {
                     }                    
                 });
                 break;
+                default:              
+              }
+        });
+    });
+}
+
+//Forth tabs
+if(document.querySelectorAll('.tab-jsl').length !== 0) {
+    let tabLiForth = document.querySelectorAll('.tab-jsl');
+
+    tabLiForth.forEach(element => {
+        element.addEventListener('click', function(e) {
+            e.preventDefault();
+            let tabAttribute = element.getAttribute('data-type'),
+                tabLiInner = element.parentNode.querySelectorAll('.tab-jsl'),
+                tabBoxInner = element.parentNode.parentNode.parentNode.querySelectorAll('.python-inner');
+            
+
+            //remove active class
+            tabBoxInner.forEach(item => {
+                item.classList.remove('active');
+            });
+            tabLiInner.forEach(el => {
+                el.classList.remove('active');
+            });
+            element.classList.add('active');
+    
+            //add active class
+            switch (tabAttribute) {
+                case "spark-nlp-jsl":
+                    tabBoxInner.forEach(item => {
+                        if(item.classList.contains('python-johnsnowlabs')) {
+                            item.classList.add('active');
+                        }                    
+                    });
+                    break;
+                case "johnsnowlabs":
+                    tabBoxInner.forEach(item => {
+                        if(item.classList.contains('python-spark-nlp-jsl')) {
+                            item.classList.add('active');
+                        }                    
+                    });
+                  break;
                 default:              
               }
         });

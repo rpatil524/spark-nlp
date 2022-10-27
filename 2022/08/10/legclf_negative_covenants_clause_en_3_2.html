@@ -446,6 +446,7 @@
   <div class="top_tab_li">   
     <p><button data-type="python" class="tab-li code-selector-active python-button">Python</button><button data-type="scala" class="tab-li code-selector-un-active scala-button">Scala</button><button data-type="nlu" class="tab-li code-selector-un-active nlu-button">NLU</button></p>
 </div>
+
   <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">documentAssembler</span> <span class="o">=</span> <span class="n">nlp</span><span class="p">.</span><span class="n">DocumentAssembler</span><span class="p">()</span> \
      <span class="p">.</span><span class="n">setInputCol</span><span class="p">(</span><span class="s">"clause_text"</span><span class="p">)</span> \
      <span class="p">.</span><span class="n">setOutputCol</span><span class="p">(</span><span class="s">"document"</span><span class="p">)</span>
@@ -527,15 +528,12 @@
 
 <h2 id="benchmarking">Benchmarking</h2>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>                    precision    recall  f1-score   support
-
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>             label  precision    recall  f1-score   support
 negative-covenants       1.00      0.92      0.96        51
              other       0.97      1.00      0.98       130
-
-          accuracy                           0.98       181
-         macro avg       0.99      0.96      0.97       181
-      weighted avg       0.98      0.98      0.98       181
-
+          accuracy         -         -       0.98       181
+         macro-avg       0.99      0.96      0.97       181
+      weighted-avg       0.98      0.98      0.98       181
 </code></pre></div></div>
 </div><div class="d-print-none"><footer class="article__footer"><meta itemprop="dateModified" content="2022-08-10T00:00:00+00:00"><!-- start custom article footer snippet -->
 
@@ -612,11 +610,20 @@ defer(function () { // load inital language
 
 if((document.querySelectorAll('.model-wrap').length !== 0) || (document.querySelectorAll('.tabs-new').length !== 0)) {
 
-    let tabLi = document.querySelectorAll('.tabs-new .tab-li'),
-        tabLiTopF = document.querySelectorAll('.top_tab_li');
+    let tabLi = document.querySelectorAll('.tabs-new .tab-li');
+
+    if((document.querySelectorAll('.model-wrap').length !== 0)) {
+        tabLi = document.querySelectorAll('.model-wrap .tab-li');
+    } 
+    
+    let tabLiTopF = document.querySelectorAll('.top_tab_li'),
+        pythonInner = document.querySelectorAll('.python-inner');
 
     tabLiTopF.forEach(e => {        
         e.nextElementSibling.classList.add('active');
+    });
+    pythonInner.forEach(e => {
+        e.firstElementChild.classList.remove('language-python');
     });
 
     tabLi.forEach(element => {
@@ -626,7 +633,7 @@ if((document.querySelectorAll('.model-wrap').length !== 0) || (document.querySel
                 tabLiInner = element.parentNode.querySelectorAll('.tab-li'),
                 tabBoxInner = element.parentNode.parentNode.parentNode.querySelectorAll('.highlighter-rouge');
             
-            //remove active class
+            //remove active class from NLU
             tabBoxInner.forEach(item => {
                 item.classList.remove('active');
                 if(item.classList.contains('nlu-block')) {
@@ -768,6 +775,49 @@ if(document.querySelectorAll('.tab-li-inner').length !== 0) {
                     }                    
                 });
                 break;
+                default:              
+              }
+        });
+    });
+}
+
+//Forth tabs
+if(document.querySelectorAll('.tab-jsl').length !== 0) {
+    let tabLiForth = document.querySelectorAll('.tab-jsl');
+
+    tabLiForth.forEach(element => {
+        element.addEventListener('click', function(e) {
+            e.preventDefault();
+            let tabAttribute = element.getAttribute('data-type'),
+                tabLiInner = element.parentNode.querySelectorAll('.tab-jsl'),
+                tabBoxInner = element.parentNode.parentNode.parentNode.querySelectorAll('.python-inner');
+            
+
+            //remove active class
+            tabBoxInner.forEach(item => {
+                item.classList.remove('active');
+            });
+            tabLiInner.forEach(el => {
+                el.classList.remove('active');
+            });
+            element.classList.add('active');
+    
+            //add active class
+            switch (tabAttribute) {
+                case "spark-nlp-jsl":
+                    tabBoxInner.forEach(item => {
+                        if(item.classList.contains('python-johnsnowlabs')) {
+                            item.classList.add('active');
+                        }                    
+                    });
+                    break;
+                case "johnsnowlabs":
+                    tabBoxInner.forEach(item => {
+                        if(item.classList.contains('python-spark-nlp-jsl')) {
+                            item.classList.add('active');
+                        }                    
+                    });
+                  break;
                 default:              
               }
         });
